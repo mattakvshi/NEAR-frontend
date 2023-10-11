@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/mattakvshi/NEAR-frontend/static/css/main.59f08a72.css",
+    "main.js": "/mattakvshi/NEAR-frontend/static/js/main.9f9baf5a.js",
+    "static/media/header-bg.jpg": "/mattakvshi/NEAR-frontend/static/media/header-bg.77a93b9c2fa84630aaea.jpg",
+    "static/media/desc-img.jpg": "/mattakvshi/NEAR-frontend/static/media/desc-img.4c49c5841eb5c5e839e4.jpg",
+    "static/media/NEAR-logo-white.png": "/mattakvshi/NEAR-frontend/static/media/NEAR-logo-white.8409faf065eaff5eecc9.png",
+    "index.html": "/mattakvshi/NEAR-frontend/index.html",
+    "main.59f08a72.css.map": "/mattakvshi/NEAR-frontend/static/css/main.59f08a72.css.map",
+    "main.9f9baf5a.js.map": "/mattakvshi/NEAR-frontend/static/js/main.9f9baf5a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59f08a72.css",
+    "static/js/main.9f9baf5a.js"
+  ]
+}
