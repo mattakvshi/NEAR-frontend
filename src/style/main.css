@@ -1,0 +1,90 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Poppins:wght@400;500;700&display=swap');
+
+:root {
+	/* Light mode */
+	--extra-light: #e5e5e5;
+
+	--light-bg: #d2d2d2;
+	--light-bg0: rgba(210, 210, 210, 0);
+
+	--dark-header: rgba(10, 31, 50, 0.67);
+	--text-color-dark: #0a1f32;
+
+	--text-color-medium-dark: #2d384a;
+	--text-color-medium-dark: rgba(45, 56, 74, 0.9);
+
+	--text-color-light-dark: #344756;
+	--text-color-light-dark50: rgba(52, 71, 86, 0.5);
+	--text-color-light-dark70: rgba(52, 71, 86, 0.7);
+	--text-color-light-dark0: rgba(52, 71, 86, 0);
+
+	--accent-color: #ff4c2b;
+	--accent-color90: rgba(255, 76, 43, 0.9);
+}
+
+html,
+body {
+	min-height: 100vh;
+
+	font-family: 'Poppins', sans-serif;
+}
+
+#root {
+	min-height: 100vh;
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	width: 100%;
+}
+
+.wrapper {
+	cursor: none;
+	background-color: var(--light-bg);
+}
+
+.loader-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	background-color: var(--light-bg);
+	color: var(--text-color-dark);
+}
+
+.title-1 {
+	text-align: center;
+	font-size: 64px;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.title-1 em {
+	color: var(--accent-color);
+	font-style: normal;
+}
+
+.title-2 {
+	text-align: center;
+	font-size: 48px;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.absolute {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	background-color: var(--light-bg);
+	z-index: 1;
+}

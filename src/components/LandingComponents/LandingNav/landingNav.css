@@ -1,0 +1,93 @@
+.landing-nav {
+	max-width: 80%;
+	min-width: 80%;
+
+	padding: 20px 0;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.nav-row-logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	column-gap: 15px;
+}
+
+.nav-row-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	column-gap: 30px;
+}
+
+.logo-img {
+	width: 80px;
+	height: 80px;
+}
+
+.logo-text {
+	color: var(--light-bg);
+	text-align: center;
+	font-size: 60px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.log-in-button {
+	color: var(--light-bg);
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+
+	padding: 12px 20px;
+	border-radius: 10px;
+
+	border: 1px solid var(--light-bg0);
+
+	transition: all 0.2s ease-in;
+
+	cursor: none;
+}
+
+.log-in-button:hover {
+	border: 1px solid var(--light-bg);
+}
+
+.log-in-button:active {
+	position: relative;
+	top: 2px;
+}
+
+.sing-in-button {
+	background-color: var(--light-bg);
+	color: var(--text-color-light-dark);
+
+	padding: 12px 20px;
+	border-radius: 10px;
+
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+
+	transition: all 0.2s ease-in;
+
+	cursor: none;
+}
+
+.sing-in-button:hover {
+	background-color: var(--text-color-light-dark);
+	color: var(--light-bg);
+}
+
+.sing-in-button:active {
+	position: relative;
+	top: 1px;
+}
