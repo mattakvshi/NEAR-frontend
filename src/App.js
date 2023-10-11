@@ -11,7 +11,7 @@ function App() {
 			<Router>
 				<ScrollToTop />
 				<Routes>
-					<Route path='/' element={<Landing />} />
+					<Route path='/NEAR-frontend/' element={<Landing />} />
 					{/* <Route path='/' element={<Home />} /> */}
 				</Routes>
 			</Router>
