@@ -17,14 +17,15 @@
 	top: 0;
 	left: 0;
 
-	transform: scale(0);
+	pointer-events: none;
 	opacity: 0;
 	transition: all 0.5s;
 }
 
 .start-modal.active {
-	transform: scale(1);
+	pointer-events: all;
 	opacity: 1;
+	background-color: rgba(0, 0, 0, 0.2);
 }
 
 .modal-content {
@@ -37,6 +38,27 @@
 
 	background-color: var(--light-bg);
 	border-radius: calc(var(--index) * 2.6);
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 22px 70px 4px;
+
+	position: relative;
+
+	transform: scale(0);
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+.modal-content.active {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.close-button {
+	position: absolute;
+	top: 5%;
+	right: 4%;
+
+	width: calc(var(--index) * 1);
+	height: calc(var(--index) * 1);
 }
 
 .popup-row {
@@ -120,7 +142,7 @@
 
 .account-create-button:active {
 	position: relative;
-	top: 1px;
+	top: 2px;
 }
 
 /* Community Create Button */
@@ -184,7 +206,7 @@
 
 .community-create-button:active {
 	position: relative;
-	top: 1px;
+	top: 2px;
 }
 
 /* Account Log in Button */
@@ -248,7 +270,7 @@
 
 .account-login-button:active {
 	position: relative;
-	top: 1px;
+	top: 2px;
 }
 
 /* Community Lon in Button */
@@ -312,5 +334,5 @@
 
 .community-login-button:active {
 	position: relative;
-	top: 1px;
+	top: 2px;
 }
