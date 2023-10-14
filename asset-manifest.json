@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/NEAR-frontend/static/css/main.3f30a3bc.css",
-    "main.js": "/NEAR-frontend/static/js/main.690a3859.js",
+    "main.css": "/NEAR-frontend/static/css/main.c941711b.css",
+    "main.js": "/NEAR-frontend/static/js/main.fd873407.js",
     "static/media/header-bg.jpg": "/NEAR-frontend/static/media/header-bg.77a93b9c2fa84630aaea.jpg",
     "static/media/desc-img.jpg": "/NEAR-frontend/static/media/desc-img.4c49c5841eb5c5e839e4.jpg",
     "static/media/NEAR-logo-white.png": "/NEAR-frontend/static/media/NEAR-logo-white.8409faf065eaff5eecc9.png",
+    "static/media/NEAR-account-png-icon.png": "/NEAR-frontend/static/media/NEAR-account-png-icon.46455b6805e4fa2576c3.png",
+    "static/media/NEAR-close-icon.png": "/NEAR-frontend/static/media/NEAR-close-icon.79bdbdad615fc1a2e6f8.png",
+    "static/media/NEAR-community-png-icon.png": "/NEAR-frontend/static/media/NEAR-community-png-icon.6c5660af90e7727b072a.png",
     "index.html": "/NEAR-frontend/index.html",
-    "main.3f30a3bc.css.map": "/NEAR-frontend/static/css/main.3f30a3bc.css.map",
-    "main.690a3859.js.map": "/NEAR-frontend/static/js/main.690a3859.js.map"
+    "main.c941711b.css.map": "/NEAR-frontend/static/css/main.c941711b.css.map",
+    "main.fd873407.js.map": "/NEAR-frontend/static/js/main.fd873407.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f30a3bc.css",
-    "static/js/main.690a3859.js"
+    "static/css/main.c941711b.css",
+    "static/js/main.fd873407.js"
   ]
 }
