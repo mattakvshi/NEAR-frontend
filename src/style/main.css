@@ -9,6 +9,7 @@
 	--light-bg0: rgba(210, 210, 210, 0);
 
 	--dark-header: rgba(10, 31, 50, 0.67);
+	--dark-desc: rgba(10, 31, 50, 0.3);
 	--text-color-dark: #0a1f32;
 
 	--text-color-medium-dark: #2d384a;
@@ -21,6 +22,8 @@
 
 	--accent-color: #ff4c2b;
 	--accent-color90: rgba(255, 76, 43, 0.9);
+
+	--index: calc(1vw + 1vh);
 }
 
 html,
@@ -87,4 +90,6 @@ main {
 
 	background-color: var(--light-bg);
 	z-index: 1;
+
+	cursor: none;
 }

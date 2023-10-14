@@ -40,7 +40,7 @@
 	align-items: center;
 	justify-content: center;
 
-	max-width: 55vw;
+	max-width: calc(var(--index) * 45);
 	height: 80vh;
 }
 
@@ -53,7 +53,7 @@
 
 .header-title {
 	color: var(--light-bg);
-	font-size: 70px;
+	font-size: calc(var(--index) * 3);
 	font-weight: 600;
 	text-align: center;
 	padding: 20px 0;
@@ -66,7 +66,7 @@
 
 .header-text {
 	color: var(--light-bg);
-	font-size: 24px;
+	font-size: calc(var(--index) * 0.8);
 	font-style: normal;
 	font-weight: 500;
 	padding: 20px 0;

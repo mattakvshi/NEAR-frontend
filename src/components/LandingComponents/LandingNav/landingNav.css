@@ -26,14 +26,14 @@
 }
 
 .logo-img {
-	width: 80px;
-	height: 80px;
+	width: calc(var(--index) * 2.75);
+	height: calc(var(--index) * 2.75);
 }
 
 .logo-text {
 	color: var(--light-bg);
 	text-align: center;
-	font-size: 60px;
+	font-size: calc(var(--index) * 2.2);
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
@@ -41,13 +41,13 @@
 
 .log-in-button {
 	color: var(--light-bg);
-	font-size: 24px;
+	font-size: calc(var(--index) * 0.95);
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
 
-	padding: 12px 20px;
-	border-radius: 10px;
+	padding: calc(var(--index) * 0.5) calc(var(--index) * 0.8);
+	border-radius: calc(var(--index) * 0.37);
 
 	border: 1px solid var(--light-bg0);
 
@@ -69,10 +69,10 @@
 	background-color: var(--light-bg);
 	color: var(--text-color-light-dark);
 
-	padding: 12px 20px;
-	border-radius: 10px;
+	padding: calc(var(--index) * 0.5) calc(var(--index) * 0.8);
+	border-radius: calc(var(--index) * 0.37);
 
-	font-size: 24px;
+	font-size: calc(var(--index) * 0.95);
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;

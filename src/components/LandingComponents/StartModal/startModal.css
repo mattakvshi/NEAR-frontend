@@ -1,0 +1,316 @@
+.start-modal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 100%;
+
+	-webkit-backdrop-filter: blur(4px);
+	-moz-backdrop-filter: blur(4px);
+	-ms-backdrop-filter: blur(4px);
+	-o-backdrop-filter: blur(4px);
+	backdrop-filter: blur(4px);
+
+	position: fixed;
+
+	top: 0;
+	left: 0;
+
+	transform: scale(0);
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+.start-modal.active {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.modal-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: calc(var(--index) * 30);
+	height: calc(var(--index) * 20);
+
+	background-color: var(--light-bg);
+	border-radius: calc(var(--index) * 2.6);
+}
+
+.popup-row {
+	display: flex;
+	flex-direction: row;
+	column-gap: calc(var(--index) * 2);
+}
+
+.acc-img {
+	width: calc(var(--index) * 10);
+	height: calc(var(--index) * 10);
+
+	pointer-events: none;
+}
+
+.comm-img {
+	width: calc(var(--index) * 10);
+	height: calc(var(--index) * 10);
+
+	pointer-events: none;
+}
+
+/* Account Create Button */
+
+.account-create-button {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	background-color: var(--accent-color);
+	color: var(--light-bg);
+
+	padding: calc(var(--index) * 0.7) calc(var(--index) * 1);
+	border-radius: calc(var(--index) * 0.37);
+	border: 2px solid var(--text-color-light-dark0);
+
+	font-size: calc(var(--index) * 0.8);
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease-out;
+	transition: all 0.2s ease-in;
+
+	cursor: none;
+	position: relative;
+}
+
+.account-create-button::before {
+	content: 'Create';
+
+	position: absolute;
+	top: 37%;
+	left: 20%;
+
+	color: var(--text-color-light-dark);
+
+	font-size: calc(var(--index) * 2);
+
+	opacity: 0;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-ms-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+}
+
+.account-create-button:hover {
+	background-color: var(--light-bg);
+	border: 2px solid var(--text-color-light-dark);
+}
+
+.account-create-button:hover::before {
+	opacity: 1;
+}
+
+.account-create-button:active {
+	position: relative;
+	top: 1px;
+}
+
+/* Community Create Button */
+
+.community-create-button {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	background-color: var(--text-color-light-dark);
+	color: var(--light-bg);
+
+	padding: calc(var(--index) * 0.7) calc(var(--index) * 1);
+	border-radius: calc(var(--index) * 0.37);
+	border: 2px solid var(--text-color-light-dark0);
+
+	font-size: calc(var(--index) * 0.8);
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease-out;
+	transition: all 0.2s ease-in;
+
+	cursor: none;
+	position: relative;
+}
+
+.community-create-button::before {
+	content: 'Create';
+
+	position: absolute;
+	top: 37%;
+	left: 20%;
+
+	color: var(--text-color-light-dark);
+
+	font-size: calc(var(--index) * 2);
+
+	opacity: 0;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-ms-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+}
+
+.community-create-button:hover {
+	background-color: var(--light-bg);
+	border: 2px solid var(--text-color-light-dark);
+}
+
+.community-create-button:hover::before {
+	opacity: 1;
+}
+
+.community-create-button:active {
+	position: relative;
+	top: 1px;
+}
+
+/* Account Log in Button */
+
+.account-login-button {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	background-color: var(--accent-color);
+	color: var(--light-bg);
+
+	padding: calc(var(--index) * 0.7) calc(var(--index) * 1);
+	border-radius: calc(var(--index) * 0.37);
+	border: 2px solid var(--text-color-light-dark0);
+
+	font-size: calc(var(--index) * 0.8);
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease-out;
+	transition: all 0.2s ease-in;
+
+	cursor: none;
+	position: relative;
+}
+
+.account-login-button::before {
+	content: 'Log in';
+
+	position: absolute;
+	top: 37%;
+	left: 25%;
+
+	color: var(--text-color-light-dark);
+
+	font-size: calc(var(--index) * 2);
+
+	opacity: 0;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-ms-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+}
+
+.account-login-button:hover {
+	background-color: var(--light-bg);
+	border: 2px solid var(--text-color-light-dark);
+}
+
+.account-login-button:hover::before {
+	opacity: 1;
+}
+
+.account-login-button:active {
+	position: relative;
+	top: 1px;
+}
+
+/* Community Lon in Button */
+
+.community-login-button {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	background-color: var(--text-color-light-dark);
+	color: var(--light-bg);
+
+	padding: calc(var(--index) * 0.7) calc(var(--index) * 1);
+	border-radius: calc(var(--index) * 0.37);
+	border: 2px solid var(--text-color-light-dark0);
+
+	font-size: calc(var(--index) * 0.8);
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease-out;
+	transition: all 0.2s ease-in;
+
+	cursor: none;
+	position: relative;
+}
+
+.community-login-button::before {
+	content: 'Log in';
+
+	position: absolute;
+	top: 37%;
+	left: 25%;
+
+	color: var(--text-color-light-dark);
+
+	font-size: calc(var(--index) * 2);
+
+	opacity: 0;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-ms-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+}
+
+.community-login-button:hover {
+	background-color: var(--light-bg);
+	border: 2px solid var(--text-color-light-dark);
+}
+
+.community-login-button:hover::before {
+	opacity: 1;
+}
+
+.community-login-button:active {
+	position: relative;
+	top: 1px;
+}

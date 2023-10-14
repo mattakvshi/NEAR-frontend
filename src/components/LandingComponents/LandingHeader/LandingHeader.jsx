@@ -5,7 +5,7 @@ import LandingNav from '../LandingNav/LandingNav';
 
 import './landingHeader.css';
 
-export default function LandingHeader() {
+export default function LandingHeader({ setLogInActive, setSingInActive }) {
 	const headerRef = useRef(null); // определяем ref
 	const textRef = useRef(null);
 	const [loaded, setLoaded] = useState(false); // стейт для загрузки
@@ -60,7 +60,10 @@ export default function LandingHeader() {
 			<div className='header-img'>
 				<div className='header-wrapper'>
 					<div className='sectionUp'>
-						<LandingNav />
+						<LandingNav
+							setLogInActive={setLogInActive}
+							setSingInActive={setSingInActive}
+						/>
 						<div className='heder-column'>
 							<div className='landing-header'>
 								<h2 className='header-title' id='header-title' ref={headerRef}>

@@ -3,12 +3,13 @@ import descImg from '../../../img/Landing/desc-img.jpg';
 
 import './landingDesc.css';
 
-export default function LandignDesc() {
+export default function LandingDesc({ setActive }) {
 	return (
 		<section className='description-section' data-scroll-section>
 			<div className='description-row'>
 				<div className='description-column'>
 					<img src={descImg} alt='descImg' className='description-img' />
+					<div className='color-box'></div>
 					<div className='box-1'>
 						<span className='box-text'>
 							<em>R</em>espond
@@ -47,9 +48,12 @@ export default function LandignDesc() {
 							</p>
 						</div>
 						<div className='start-using-row'>
-							<a href='!#' className='start-using-button'>
+							<button
+								className='start-using-button'
+								onClick={() => setActive(true)}
+							>
 								<span>Start using</span>
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>
