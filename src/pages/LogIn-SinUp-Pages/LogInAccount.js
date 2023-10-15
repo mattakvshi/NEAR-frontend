@@ -2,15 +2,36 @@ import { NavLink } from 'react-router-dom';
 import LogInFramework from '../../components/LogIn-SingUp/LogInFramework/LogInFramework';
 
 import AccLogImg from './../../img/SignUp-LogIn/Log-In-Account.jpg';
+import logoImg from './../../img/Landing/NEAR-logo-white.png';
 
 const LogInAccount = () => {
 	return (
-		<LogInFramework img={AccLogImg}>
+		<LogInFramework img={AccLogImg} opacity={0.38}>
 			<div className='lif__row'>
 				<div className='lif__column'>
-					<div className='lif-logo'></div>
-					<div className='lif-title'></div>
-					<div className='lif-text'></div>
+					<div className='lif-logo'>
+						<img src={logoImg} alt='' className='lif-logo__img' />
+						<h1 className='lif-logo-text'>NEAR</h1>
+					</div>
+					<div className='lif-title'>Log in and...</div>
+					<div className='lif-text'>
+						You will be able to add your loved ones to friends, create templates
+						for sending emergency notifications, create groups for convenient
+						mailing, as well as subscribe to notifications from communities that
+						always keep their finger on the pulse.
+					</div>
+					<svg
+						xmlns='http://www.w3.org/2000/svg'
+						width='134'
+						height='6'
+						viewBox='0 0 134 6'
+						fill='none'
+						className='lif-slider-svg'
+					>
+						<path d='M0 3H48' stroke='#D2D2D2' stroke-width='5' />
+						<path d='M59.5 3H91.5' stroke='#9E9E9E' stroke-width='2' />
+						<path d='M101.5 3H133.5' stroke='#9E9E9E' stroke-width='2' />
+					</svg>
 				</div>
 				<div className='lif__column'>
 					<div className='form-desc'>

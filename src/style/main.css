@@ -1,11 +1,12 @@
 @import './reset.css';
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sanswght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
 
 :root {
 	/* Light mode */
 	--extra-light: #e5e5e5;
 
 	--light-bg: #d2d2d2;
+	--light-bg80: rgba(210, 210, 210, 0.8);
 	--light-bg0: rgba(210, 210, 210, 0);
 
 	--dark-header: rgba(10, 31, 50, 0.67);
