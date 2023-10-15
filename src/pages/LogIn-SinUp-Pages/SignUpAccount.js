@@ -3,6 +3,7 @@ import LogInFramework from '../../components/LogIn-SingUp/LogInFramework/LogInFr
 
 import AccCreateImg from './../../img/SignUp-LogIn/Sign-In-Account.jpg';
 import logoImg from './../../img/Landing/NEAR-logo-white.png';
+import InputComponent from '../../components/LogIn-SingUp/InputComponent/InputComponent';
 
 const SingUpAccount = () => {
 	return (
@@ -37,7 +38,24 @@ const SingUpAccount = () => {
 					<div className='form-desc'>
 						<p className='letsgo-text'>LET'S GET YOU STARTED</p>
 						<h4 className='lif-form__title'>Create an Account</h4>
-						<div className='lif-input-section'></div>
+						<div className='lif-input-section'>
+							<InputComponent id='name' type='text' width='68px'>
+								Name
+							</InputComponent>
+							<InputComponent id='email' type='email' width='66px'>
+								Email
+							</InputComponent>
+							<InputComponent id='password' type='password' width='94px'>
+								Password
+							</InputComponent>
+							<InputComponent id='location' type='text' width='176px'>
+								Country, city, district
+							</InputComponent>
+							<InputComponent id='birthday' type='date' width='86px'>
+								Birthday
+							</InputComponent>
+							<div className='radio-row'></div>
+						</div>
 						<button className='lif-button'>
 							<span>GER STARTED</span>
 						</button>

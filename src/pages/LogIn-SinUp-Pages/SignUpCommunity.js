@@ -3,6 +3,7 @@ import LogInFramework from '../../components/LogIn-SingUp/LogInFramework/LogInFr
 
 import CommCreateImg from './../../img/SignUp-LogIn/Sing-in-Community.jpg';
 import logoImg from './../../img/Landing/NEAR-logo-white.png';
+import InputComponent from '../../components/LogIn-SingUp/InputComponent/InputComponent';
 
 const SingUpCommunity = () => {
 	return (
@@ -35,13 +36,33 @@ const SingUpCommunity = () => {
 				</div>
 				<div className='lif__column'>
 					<div className='form-desc'>
-						<p className='letsgo-text'></p>
-						<h4 className='lif-title'></h4>
-						<div className='lif-input-section'></div>
-						<button className='lif-button'></button>
+						<p className='letsgo-text'>LET'S GET YOU STARTED</p>
+						<h4 className='lif-form__title'>Create a Community</h4>
+						<div className='lif-input-section'>
+							<InputComponent id='name' type='text' width='162px'>
+								Community name
+							</InputComponent>
+							<InputComponent id='email' type='email' width='66px'>
+								Email
+							</InputComponent>
+							<InputComponent id='password' type='password' width='94px'>
+								Password
+							</InputComponent>
+							<InputComponent id='location' type='text' width='158px'>
+								Monitoring region
+							</InputComponent>
+							<InputComponent id='emergency' type='text' width='144px'>
+								Emergency type
+							</InputComponent>
+						</div>
+						<button className='lif-button'>
+							<span>GER STARTED</span>
+						</button>
 						<div className='lif-link__row'>
-							<p className='lif-link__text'></p>
-							<NavLink to='' className='lif-link' />
+							<p className='lif-link__text'>Already have an account?</p>
+							<NavLink to='/NEAR-frontend/login/community' className='lif-link'>
+								LOGIN HERE
+							</NavLink>
 						</div>
 					</div>
 				</div>

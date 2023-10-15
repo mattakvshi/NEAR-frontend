@@ -19,6 +19,7 @@
 }
 
 .lif-container-img {
+	background: cover no-repeat;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -49,7 +50,7 @@
 	justify-content: space-between;
 	align-items: center;
 
-	width: calc(var(--index) * 44);
+	width: calc(var(--index) * 42);
 	height: calc(var(--index) * 28);
 }
 
@@ -60,7 +61,7 @@
 	align-items: left;
 	row-gap: calc(var(--index) * 1.2);
 
-	width: calc(var(--index) * 20);
+	width: calc(var(--index) * 19);
 	height: calc(var(--index) * 26);
 }
 
@@ -118,7 +119,7 @@
 
 	background-color: var(--light-bg);
 	border-radius: calc(var(--index) * 0.8);
-	width: calc(var(--index) * 20);
+	width: calc(var(--index) * 19);
 }
 
 .letsgo-text {
@@ -138,7 +139,13 @@
 }
 
 .lif-input-section {
-	padding: calc(var(--index) * 1) 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: calc(var(--index) * 1);
+
+	padding: calc(var(--index) * 1) 0 calc(var(--index) * 0.4);
 }
 
 .lif-button {
@@ -149,15 +156,14 @@
 
 	padding: calc(var(--index) * 0.5) calc(var(--index) * 0.8);
 	border-radius: calc(var(--index) * 0.4);
+	border: 1px solid var(--text-color-light-dark0);
 
-	font-size: calc(var(--index) * 0.7);
+	font-size: calc(var(--index) * 0.65);
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
 
 	transition: all 0.2s ease-in;
-
-	cursor: none;
 }
 
 .lif-button:hover {
@@ -166,6 +172,10 @@
 }
 
 .lif-button:active {
+	background-color: var(--light-bg);
+	color: var(--text-color-light-dark);
+	border: 1px solid var(--text-color-light-dark);
+
 	position: relative;
 	top: 1px;
 }
@@ -204,4 +214,60 @@
 
 .lif-link:hover {
 	color: var(--accent-color);
+}
+
+.lif-check-row {
+	width: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.box-and-p-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	column-gap: 5px;
+}
+
+.custom-checkbox__label {
+	color: var(--text-color-medium-dark);
+	font-size: calc(var(--index) * 0.6);
+	font-style: normal;
+	font-weight: 400;
+	line-height: 22.53px;
+}
+
+.forgot-pass {
+	color: var(--text-color-medium-dark);
+	font-size: calc(var(--index) * 0.6);
+	font-style: normal;
+	font-weight: 500;
+	line-height: 22.53px;
+}
+
+.forgot-pass:hover {
+	color: var(--accent-color);
+	font-size: calc(var(--index) * 0.6);
+	font-style: normal;
+	font-weight: 500;
+	line-height: 22.53px;
+}
+
+.sorry-modal-text {
+	text-align: center;
+	color: var(--text-color-medium-dark);
+	font-size: calc(var(--index) * 1.7);
+	font-style: normal;
+	font-weight: 500;
+
+	padding: 0 calc(var(--index) * 1.5);
+}
+
+.sorry-modal-text em {
+	color: var(--accent-color);
+	font-style: normal;
 }

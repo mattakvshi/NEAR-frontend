@@ -14,11 +14,12 @@
 	--text-color-dark: #0a1f32;
 
 	--text-color-medium-dark: #2d384a;
-	--text-color-medium-dark: rgba(45, 56, 74, 0.9);
+	--text-color-medium-dark90: rgba(45, 56, 74, 0.9);
 
 	--text-color-light-dark: #344756;
 	--text-color-light-dark50: rgba(52, 71, 86, 0.5);
 	--text-color-light-dark70: rgba(52, 71, 86, 0.7);
+	--text-color-light-dark90: rgba(52, 71, 86, 0.9);
 	--text-color-light-dark0: rgba(52, 71, 86, 0);
 
 	--accent-color: #ff4c2b;
@@ -30,18 +31,21 @@
 html,
 body {
 	min-height: 100vh;
+	min-width: 100vw;
 
 	font-family: 'Poppins', sans-serif;
 }
 
 #root {
 	min-height: 100vh;
+	min-width: 100vw;
 }
 
 .App {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	min-width: 100vw;
 }
 
 main {
