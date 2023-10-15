@@ -1,9 +1,11 @@
 import { NavLink } from 'react-router-dom';
 import LogInFramework from '../../components/LogIn-SingUp/LogInFramework/LogInFramework';
 
+import AccCreateImg from './../../img/SignUp-LogIn/Sign-In-Account.jpg';
+
 const SingUpAccount = () => {
 	return (
-		<LogInFramework>
+		<LogInFramework img={AccCreateImg}>
 			<div className='lif__row'>
 				<div className='lif__column'>
 					<div className='lif-logo'></div>
