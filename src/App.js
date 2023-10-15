@@ -5,10 +5,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './utils/ScrollToTop';
 
 import Landing from './pages/Landing';
-import LogInAccount from './pages/LogInAccount';
-import LogInCommunity from './pages/LogInCommunity';
-import SingUpAccount from './pages/SignUpAccount';
-import SingUpCommunity from './pages/SignUpCommunity';
+import LogInAccount from './pages/LogIn-SinUp-Pages/LogInAccount';
+import LogInCommunity from './pages/LogIn-SinUp-Pages/LogInCommunity';
+import SingUpAccount from './pages/LogIn-SinUp-Pages/SignUpAccount';
+import SingUpCommunity from './pages/LogIn-SinUp-Pages/SignUpCommunity';
 
 function App() {
 	return (

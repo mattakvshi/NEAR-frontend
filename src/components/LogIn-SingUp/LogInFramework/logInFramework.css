@@ -1,0 +1,77 @@
+.lif-main-container {
+	width: 100vw;
+	height: 100vh;
+
+	background-color: var(--text-color-dark);
+	overflow: hidden;
+
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: -99;
+}
+
+.lif-container-img {
+	opacity: 0.5;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	z-index: -1;
+}
+
+.lfi-content-section {
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.lif__row {
+	background-color: var(--light-bg);
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	column-gap: calc(var(--index) * 2);
+
+	width: calc(var(--index) * 44);
+	height: calc(var(--index) * 28);
+}
+
+.lif__column {
+	background-color: var(--text-color-dark);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: calc(var(--index) * 2);
+
+	width: calc(var(--index) * 20);
+	height: calc(var(--index) * 26);
+}
+
+.lif-logo {
+}
+.lif-title {
+}
+.lif-text {
+}
+.form-desc {
+}
+.letsgo-text {
+}
+.lif-input-section {
+}
+.lif-button {
+}
+.lif-link__row {
+}
+.lif-link__text {
+}
+.lif-link {
+}
