@@ -5,7 +5,7 @@ export default function InputComponent({ children, id, type, width }) {
 		<div className='input-container'>
 			<input id={id} className='input' type={type} placeholder=' ' />
 			<div className='cut' style={{ width: width }}></div>
-			<label for={id} className='placeholder'>
+			<label htmlFor={id} className='placeholder'>
 				{children}
 			</label>
 		</div>

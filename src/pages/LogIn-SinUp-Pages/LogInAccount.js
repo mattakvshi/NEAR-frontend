@@ -7,6 +7,7 @@ import logoImg from './../../img/Landing/NEAR-logo-white.png';
 import InputComponent from '../../components/LogIn-SingUp/InputComponent/InputComponent';
 import CheckBoxComponent from '../../components/LogIn-SingUp/CheckBoxComponent/CheckBoxComponent';
 import StartModal from '../../components/LandingComponents/StartModal/StartModal';
+import PasswordInput from '../../components/LogIn-SingUp/InputComponent/PasswordInput';
 
 const LogInAccount = () => {
 	const [modalActive, setModalActive] = useState(false);
@@ -35,9 +36,9 @@ const LogInAccount = () => {
 							fill='none'
 							className='lif-slider-svg'
 						>
-							<path d='M0 3H48' stroke='#D2D2D2' stroke-width='5' />
-							<path d='M59.5 3H91.5' stroke='#9E9E9E' stroke-width='2' />
-							<path d='M101.5 3H133.5' stroke='#9E9E9E' stroke-width='2' />
+							<path d='M0 3H48' stroke='#D2D2D2' strokeWidth='5' />
+							<path d='M59.5 3H91.5' stroke='#9E9E9E' strokeWidth='2' />
+							<path d='M101.5 3H133.5' stroke='#9E9E9E' strokeWidth='2' />
 						</svg>
 					</div>
 					<div className='lif__column'>
@@ -48,9 +49,9 @@ const LogInAccount = () => {
 								<InputComponent id='email' type='email' width='66px'>
 									Email
 								</InputComponent>
-								<InputComponent id='password' type='password' width='94px'>
+								<PasswordInput id='password' width='94px'>
 									Password
-								</InputComponent>
+								</PasswordInput>
 							</div>
 							<div className='lif-check-row'>
 								<div className='box-and-p-row'>

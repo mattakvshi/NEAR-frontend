@@ -69,3 +69,20 @@
 .input:focus ~ .placeholder {
 	color: var(--text-color-medium-dark);
 }
+
+.password-eye {
+	position: absolute;
+	top: 33%;
+	right: 5%;
+
+	width: calc(var(--index) * 0.9);
+	height: calc(var(--index) * 0.9);
+}
+
+.password-eye:hover {
+	color: var(--accent-color);
+}
+
+.password-eye:active {
+	top: 34%;
+}

@@ -4,6 +4,7 @@ import LogInFramework from '../../components/LogIn-SingUp/LogInFramework/LogInFr
 import AccCreateImg from './../../img/SignUp-LogIn/Sign-In-Account.jpg';
 import logoImg from './../../img/Landing/NEAR-logo-white.png';
 import InputComponent from '../../components/LogIn-SingUp/InputComponent/InputComponent';
+import PasswordInput from '../../components/LogIn-SingUp/InputComponent/PasswordInput';
 
 const SingUpAccount = () => {
 	return (
@@ -29,9 +30,9 @@ const SingUpAccount = () => {
 						fill='none'
 						className='lif-slider-svg'
 					>
-						<path d='M0 3H48' stroke='#D2D2D2' stroke-width='5' />
-						<path d='M59.5 3H91.5' stroke='#9E9E9E' stroke-width='2' />
-						<path d='M101.5 3H133.5' stroke='#9E9E9E' stroke-width='2' />
+						<path d='M0 3H48' stroke='#D2D2D2' strokeWidth='5' />
+						<path d='M59.5 3H91.5' stroke='#9E9E9E' strokeWidth='2' />
+						<path d='M101.5 3H133.5' stroke='#9E9E9E' strokeWidth='2' />
 					</svg>
 				</div>
 				<div className='lif__column'>
@@ -45,9 +46,9 @@ const SingUpAccount = () => {
 							<InputComponent id='email' type='email' width='66px'>
 								Email
 							</InputComponent>
-							<InputComponent id='password' type='password' width='94px'>
+							<PasswordInput id='password' width='94px'>
 								Password
-							</InputComponent>
+							</PasswordInput>
 							<InputComponent id='location' type='text' width='176px'>
 								Country, city, district
 							</InputComponent>

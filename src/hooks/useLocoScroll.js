@@ -13,6 +13,8 @@ export default function useLocoScroll(start) {
 
 		const scrollEl = document.querySelector('#wrapper');
 
+		if (!scrollEl) return; //Проверка на то существует ли по данному пути элемент прокрутки
+
 		locoScroll = new LocomotiveScroll({
 			el: scrollEl,
 			smooth: true,
