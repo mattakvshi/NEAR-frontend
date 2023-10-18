@@ -2,14 +2,12 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import LogInFramework from '../../components/LogIn-SingUp/LogInFramework/LogInFramework';
 
-import CommLogImg from './../../img/SignUp-LogIn/Log-in-Community.jpg';
-import logoImg from './../../img/Landing/NEAR-logo-white.png';
 import InputComponent from '../../components/LogIn-SingUp/InputComponent/InputComponent';
 import CheckBoxComponent from '../../components/LogIn-SingUp/CheckBoxComponent/CheckBoxComponent';
 import StartModal from '../../components/LandingComponents/StartModal/StartModal';
 import PasswordInput from '../../components/LogIn-SingUp/InputComponent/PasswordInput';
 
-const LogInCommunity = () => {
+const LogInCommunity = ({ CommLogImg, logoImg }) => {
 	const [modalActive, setModalActive] = useState(false);
 
 	return (

@@ -1,4 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, {
+	useEffect,
+	useRef,
+	useState,
+	useCallback,
+	useMemo,
+} from 'react';
 import { NavLink } from 'react-router-dom';
 
 import './../style/main.css';
@@ -10,23 +16,37 @@ import CustomCursor from './../CustomCursor';
 import useLocoScroll from '../hooks/useLocoScroll';
 import StartModal from '../components/LandingComponents/StartModal/StartModal';
 
-import accountPng from './../img/Landing/NEAR-account-png-icon.png';
-import communityPng from './../img/Landing/NEAR-community-png-icon.png';
+import accountPng from '../img/Landing/NEAR-account-png-icon.png';
+import communityPng from '../img/Landing/NEAR-community-png-icon.png';
 
 //Импорты для компонентов, фотографии которые гружу, использую прелоудер пока грузятся
 import headerBgImg from '../img/Landing/header-bg.jpg';
 import descImg from '../img/Landing/desc-img.jpg';
 
-const Landing = () => {
+//Сюда из App прилетают 4 картинки для авторизационных и регистрационных частей приложения
+const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {
 	const [preloader, setPreloader] = useState(true);
 	const [modalLogInActive, setModalLogInActive] = useState(false);
 	const [modalSingInActive, setModalSingInActive] = useState(false);
 
 	// Массив ссылок на изображения, которые нужно предзагрузить
-	const images = [headerBgImg, descImg];
+	// const images = [headerBgImg, descImg];
+	//Использую useMemo чтобы убедиться, что изображения будут загружены один раз, и не буду перерендериваться при обновлениях и перемещениях
+	const images = useMemo(
+		() => [
+			headerBgImg,
+			descImg,
+			AccLogImg,
+			CommLogImg,
+			AccCreateImg,
+			CommCreateImg,
+			// Добавляй изображения которые грузятся во время прилодера
+		],
+		[AccLogImg, CommLogImg, AccCreateImg, CommCreateImg] //Добавили сюда в зависимости данные извне, которые могут быть изменены
+	);
 
 	// Функция для предзагрузки изображений
-	const preloadImages = () => {
+	const preloadImages = useCallback(() => {
 		let imagesToLoad = images.length; // Количество изображений, которые нужно загрузить
 
 		// Функция для проверки, все ли изображения загружены
@@ -43,12 +63,12 @@ const Landing = () => {
 			// Если какое-то изображение не удалось загрузить, мы все равно считаем его загруженным, чтобы не стопорить процесс
 			img.onerror = checkIfAllImagesAreLoaded;
 		});
-	};
+	}, [images]);
 
 	// Запускаем предзагрузку изображений при монтировании компонента
 	useEffect(() => {
 		preloadImages();
-	}, []);
+	}, [preloadImages]);
 
 	const [timer, setTimer] = useState(3);
 	const id = useRef(null);

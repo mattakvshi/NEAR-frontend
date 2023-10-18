@@ -1,12 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import LogInFramework from '../../components/LogIn-SingUp/LogInFramework/LogInFramework';
 
-import AccCreateImg from './../../img/SignUp-LogIn/Sign-In-Account.jpg';
-import logoImg from './../../img/Landing/NEAR-logo-white.png';
 import InputComponent from '../../components/LogIn-SingUp/InputComponent/InputComponent';
 import PasswordInput from '../../components/LogIn-SingUp/InputComponent/PasswordInput';
 
-const SingUpAccount = () => {
+const SingUpAccount = ({ AccCreateImg, logoImg }) => {
 	return (
 		<LogInFramework img={AccCreateImg} opacity={0.53}>
 			<div className='lif__row'>
