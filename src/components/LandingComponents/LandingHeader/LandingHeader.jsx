@@ -5,10 +5,13 @@ import LandingNav from '../LandingNav/LandingNav';
 
 import './landingHeader.css';
 
-export default function LandingHeader({ setLogInActive, setSingInActive }) {
+export default function LandingHeader({
+	setLogInActive,
+	setSingInActive,
+	headerBgImg,
+}) {
 	const headerRef = useRef(null); // определяем ref
 	const textRef = useRef(null);
-	const [loaded, setLoaded] = useState(false); // стейт для загрузки
 
 	useEffect(() => {
 		if (headerRef.current) {
@@ -57,7 +60,7 @@ export default function LandingHeader({ setLogInActive, setSingInActive }) {
 
 	return (
 		<section className='landing-header-section' data-scroll-section>
-			<div className='header-img'>
+			<div className='header-img' style={{ backgroundImage: headerBgImg }}>
 				<div className='header-wrapper'>
 					<div className='sectionUp'>
 						<LandingNav

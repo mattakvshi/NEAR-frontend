@@ -13,17 +13,49 @@ import StartModal from '../components/LandingComponents/StartModal/StartModal';
 import accountPng from './../img/Landing/NEAR-account-png-icon.png';
 import communityPng from './../img/Landing/NEAR-community-png-icon.png';
 
+//Импорты для компонентов, фотографии которые гружу, использую прелоудер пока грузятся
+import headerBgImg from '../img/Landing/header-bg.jpg';
+import descImg from '../img/Landing/desc-img.jpg';
+
 const Landing = () => {
 	const [preloader, setPreloader] = useState(true);
+	const [modalLogInActive, setModalLogInActive] = useState(false);
+	const [modalSingInActive, setModalSingInActive] = useState(false);
 
-	useLocoScroll(!preloader);
+	// Массив ссылок на изображения, которые нужно предзагрузить
+	const images = [headerBgImg, descImg];
+
+	// Функция для предзагрузки изображений
+	const preloadImages = () => {
+		let imagesToLoad = images.length; // Количество изображений, которые нужно загрузить
+
+		// Функция для проверки, все ли изображения загружены
+		const checkIfAllImagesAreLoaded = () => {
+			imagesToLoad--;
+			// Когда все изображения загружены, убираем прелоудер
+			if (imagesToLoad === 0) setPreloader(false);
+		};
+
+		images.forEach(src => {
+			const img = new Image();
+			img.src = src;
+			img.onload = checkIfAllImagesAreLoaded;
+			// Если какое-то изображение не удалось загрузить, мы все равно считаем его загруженным, чтобы не стопорить процесс
+			img.onerror = checkIfAllImagesAreLoaded;
+		});
+	};
+
+	// Запускаем предзагрузку изображений при монтировании компонента
+	useEffect(() => {
+		preloadImages();
+	}, []);
+
 	const [timer, setTimer] = useState(3);
-
 	const id = useRef(null);
 
 	const clear = () => {
 		window.clearInterval(id.current);
-		setPreloader(false);
+		// setPreloader(false);
 	};
 
 	// Инициализируем таймер
@@ -41,14 +73,13 @@ const Landing = () => {
 		}
 	}, [timer]);
 
-	const [modalLogInActive, setModalLogInActive] = useState(false);
-	const [modalSingInActive, setModalSingInActive] = useState(false);
+	useLocoScroll(!preloader && !(timer > 0));
 
 	return (
 		<>
 			<CustomCursor />
 
-			{preloader ? (
+			{preloader || timer > 0 ? (
 				<div className='loader-wrapper absolute'>
 					<h1 className='title-1'>
 						<em>NEAR</em>
@@ -60,8 +91,9 @@ const Landing = () => {
 					<LandingHeader
 						setLogInActive={setModalLogInActive}
 						setSingInActive={setModalSingInActive}
+						headerBgImg={headerBgImg}
 					/>
-					<LandingDesc setActive={setModalSingInActive} />
+					<LandingDesc setActive={setModalSingInActive} descImg={descImg} />
 					<LandingFooter />
 					<StartModal active={modalLogInActive} setActive={setModalLogInActive}>
 						<div className='popup-row'>

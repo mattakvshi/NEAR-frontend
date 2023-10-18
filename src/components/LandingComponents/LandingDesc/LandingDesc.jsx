@@ -1,9 +1,8 @@
 import React from 'react';
-import descImg from '../../../img/Landing/desc-img.jpg';
 
 import './landingDesc.css';
 
-export default function LandingDesc({ setActive }) {
+export default function LandingDesc({ setActive, descImg }) {
 	return (
 		<section className='description-section' data-scroll-section>
 			<div className='description-row'>
