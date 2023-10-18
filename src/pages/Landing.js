@@ -20,8 +20,8 @@ import accountPng from '../img/Landing/NEAR-account-png-icon.png';
 import communityPng from '../img/Landing/NEAR-community-png-icon.png';
 
 //Импорты для компонентов, фотографии которые гружу, использую прелоудер пока грузятся
-import headerBgImg from '../img/Landing/header-bg.jpg';
-import descImg from '../img/Landing/desc-img.jpg';
+import headerBgImg from '../img/Landing/header-bg.webp';
+import descImg from '../img/Landing/desc-img.webp';
 
 //Сюда из App прилетают 4 картинки для авторизационных и регистрационных частей приложения
 const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {

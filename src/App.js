@@ -11,10 +11,10 @@ import SingUpAccount from './pages/LogIn-SinUp-Pages/SignUpAccount';
 import SingUpCommunity from './pages/LogIn-SinUp-Pages/SignUpCommunity';
 
 //Импорты изображений страниц авторизации и регистрации(гружу здесь, чтобы успели загрузиться пока пользователь не перешёл на них)
-import AccLogImg from './img/SignUp-LogIn/Log-In-Account.jpg';
-import CommLogImg from './img/SignUp-LogIn/Log-in-Community.jpg';
-import AccCreateImg from './img/SignUp-LogIn/Sign-In-Account.jpg';
-import CommCreateImg from './img/SignUp-LogIn/Sing-in-Community.jpg';
+import AccLogImg from './img/SignUp-LogIn/Log-In-Account.webp';
+import CommLogImg from './img/SignUp-LogIn/Log-in-Community.webp';
+import AccCreateImg from './img/SignUp-LogIn/Sign-In-Account.webp';
+import CommCreateImg from './img/SignUp-LogIn/Sing-in-Community.webp';
 //Логотип светлый
 //TODO: Загружать его только здесь и дальше везде передавать, не загружать заново
 import logoImg from './img/Landing/NEAR-logo-white.png';
