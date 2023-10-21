@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/NEAR-frontend/static/css/main.4a60f0e5.css",
-    "main.js": "/NEAR-frontend/static/js/main.a748d10a.js",
-    "static/media/header-bg.jpg": "/NEAR-frontend/static/media/header-bg.77a93b9c2fa84630aaea.jpg",
-    "static/media/Log-in-Community.webp": "/NEAR-frontend/static/media/Log-in-Community.c6ef2b785be6fd2b4aff.webp",
-    "static/media/header-bg.webp": "/NEAR-frontend/static/media/header-bg.940df7d75b5e021cabf2.webp",
-    "static/media/Sing-in-Community.webp": "/NEAR-frontend/static/media/Sing-in-Community.5d02b8ffc3cb055b2433.webp",
-    "static/media/desc-img.webp": "/NEAR-frontend/static/media/desc-img.4532a7103232eea44f70.webp",
-    "static/media/Log-In-Account.webp": "/NEAR-frontend/static/media/Log-In-Account.cf5f3f5ccecc83077371.webp",
-    "static/media/Sign-In-Account.webp": "/NEAR-frontend/static/media/Sign-In-Account.aab8817cc86b5a91b0c2.webp",
+    "main.css": "/NEAR-frontend/static/css/main.43626868.css",
+    "main.js": "/NEAR-frontend/static/js/main.539bc4f5.js",
+    "static/media/header-bg.jpg": "/NEAR-frontend/static/media/header-bg.fc77d52808a710c57c22.jpg",
+    "static/media/Log-in-Community.webp": "/NEAR-frontend/static/media/Log-in-Community.aba94ab5febc967f289c.webp",
+    "static/media/header-bg.webp": "/NEAR-frontend/static/media/header-bg.8f70873e09d472ff9cf0.webp",
+    "static/media/Sing-in-Community.webp": "/NEAR-frontend/static/media/Sing-in-Community.6bc55ecd260fe071a071.webp",
+    "static/media/Log-In-Account.webp": "/NEAR-frontend/static/media/Log-In-Account.1494b20a1ce3f0f22ac0.webp",
+    "static/media/desc-img.webp": "/NEAR-frontend/static/media/desc-img.df974e471d50eef43940.webp",
+    "static/media/Sign-In-Account.webp": "/NEAR-frontend/static/media/Sign-In-Account.225db40c68e4c1ae5ecd.webp",
     "static/media/NEAR-logo-white.png": "/NEAR-frontend/static/media/NEAR-logo-white.8409faf065eaff5eecc9.png",
     "static/media/NEAR-account-png-icon.png": "/NEAR-frontend/static/media/NEAR-account-png-icon.46455b6805e4fa2576c3.png",
     "static/media/NEAR-close-icon.png": "/NEAR-frontend/static/media/NEAR-close-icon.79bdbdad615fc1a2e6f8.png",
     "static/media/NEAR-community-png-icon.png": "/NEAR-frontend/static/media/NEAR-community-png-icon.6c5660af90e7727b072a.png",
     "index.html": "/NEAR-frontend/index.html",
-    "main.4a60f0e5.css.map": "/NEAR-frontend/static/css/main.4a60f0e5.css.map",
-    "main.a748d10a.js.map": "/NEAR-frontend/static/js/main.a748d10a.js.map"
+    "main.43626868.css.map": "/NEAR-frontend/static/css/main.43626868.css.map",
+    "main.539bc4f5.js.map": "/NEAR-frontend/static/js/main.539bc4f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a60f0e5.css",
-    "static/js/main.a748d10a.js"
+    "static/css/main.43626868.css",
+    "static/js/main.539bc4f5.js"
   ]
 }
