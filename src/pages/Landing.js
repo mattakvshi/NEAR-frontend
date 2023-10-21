@@ -70,7 +70,7 @@ const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {
 		preloadImages();
 	}, [preloadImages]);
 
-	const [timer, setTimer] = useState(3);
+	const [timer, setTimer] = useState(1);
 	const id = useRef(null);
 
 	const clear = () => {
