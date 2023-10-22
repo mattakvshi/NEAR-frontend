@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/NEAR-frontend/static/css/main.43626868.css",
-    "main.js": "/NEAR-frontend/static/js/main.539bc4f5.js",
+    "main.css": "/NEAR-frontend/static/css/main.84687433.css",
+    "main.js": "/NEAR-frontend/static/js/main.2c877ce5.js",
     "static/media/header-bg.jpg": "/NEAR-frontend/static/media/header-bg.fc77d52808a710c57c22.jpg",
     "static/media/Log-in-Community.webp": "/NEAR-frontend/static/media/Log-in-Community.aba94ab5febc967f289c.webp",
     "static/media/header-bg.webp": "/NEAR-frontend/static/media/header-bg.8f70873e09d472ff9cf0.webp",
@@ -14,11 +14,11 @@
     "static/media/NEAR-close-icon.png": "/NEAR-frontend/static/media/NEAR-close-icon.79bdbdad615fc1a2e6f8.png",
     "static/media/NEAR-community-png-icon.png": "/NEAR-frontend/static/media/NEAR-community-png-icon.6c5660af90e7727b072a.png",
     "index.html": "/NEAR-frontend/index.html",
-    "main.43626868.css.map": "/NEAR-frontend/static/css/main.43626868.css.map",
-    "main.539bc4f5.js.map": "/NEAR-frontend/static/js/main.539bc4f5.js.map"
+    "main.84687433.css.map": "/NEAR-frontend/static/css/main.84687433.css.map",
+    "main.2c877ce5.js.map": "/NEAR-frontend/static/js/main.2c877ce5.js.map"
   },
   "entrypoints": [
-    "static/css/main.43626868.css",
-    "static/js/main.539bc4f5.js"
+    "static/css/main.84687433.css",
+    "static/js/main.2c877ce5.js"
   ]
 }
