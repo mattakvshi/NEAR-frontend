@@ -88,6 +88,8 @@
 	column-gap: 15px;
 
 	margin-bottom: calc(var(--index) * 3);
+
+	pointer-events: none;
 }
 
 .lif-logo__img {
@@ -111,6 +113,8 @@
 	font-style: normal;
 	font-weight: 700;
 	line-height: calc(var(--index) * 1.8);
+
+	pointer-events: none;
 }
 
 .lif-text {
@@ -120,7 +124,11 @@
 	font-weight: 400;
 	line-height: calc(var(--index) * 1.2);
 
-	margin-bottom: calc(var(--index) * 1);
+	margin-bottom: calc(var(--index) * 0.3);
+
+	animation: blink 11s infinite; /* Applying our animation */
+	transition: opacity 1s ease-in-out; /* Set it to animate over a period of 1 second */
+	pointer-events: none;
 }
 
 .form-desc {
@@ -143,6 +151,8 @@
 	font-style: normal;
 	font-weight: 400;
 	line-height: calc(var(--index) * 0.6);
+
+	pointer-events: none;
 }
 
 .lif-form__title {
@@ -151,6 +161,8 @@
 	font-style: normal;
 	font-weight: 500;
 	line-height: calc(var(--index) * 1.5);
+
+	pointer-events: none;
 }
 
 .lif-input-section {
@@ -213,6 +225,8 @@
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
+
+	pointer-events: none;
 }
 
 .lif-link {
@@ -254,6 +268,8 @@
 	font-style: normal;
 	font-weight: 400;
 	line-height: calc(var(--index) * 0.7);
+
+	pointer-events: none;
 }
 
 .forgot-pass {
@@ -280,6 +296,8 @@
 	font-weight: 500;
 
 	padding: 0 calc(var(--index) * 1.5);
+
+	pointer-events: none;
 }
 
 .sorry-modal-text em {
@@ -312,5 +330,17 @@
 
 	.form-desc {
 		width: calc(var(--index) * 25);
+	}
+}
+
+@keyframes blink {
+	0%,
+	85%,
+	100% {
+		opacity: 1;
+	}
+	90%,
+	95% {
+		opacity: 0;
 	}
 }

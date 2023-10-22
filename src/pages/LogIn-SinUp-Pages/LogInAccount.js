@@ -35,7 +35,6 @@ const LogInAccount = ({ AccLogImg, logoImg }) => {
 							<img src={logoImg} alt='' className='lif-logo__img' />
 							<h1 className='lif-logo-text'>NEAR</h1>
 						</div>
-						<div className='lif-title'>Log in and...</div>
 						<SliderComponent slides={slides} setSlides={setSlides} />
 					</div>
 					<div className='lif__column2'>

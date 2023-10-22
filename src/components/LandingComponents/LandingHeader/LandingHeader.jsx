@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import SplitText from './../../../utils/Split3.min.js';
 import LandingNav from '../LandingNav/LandingNav';
@@ -20,6 +20,7 @@ export default function LandingHeader({
 				linesClass: 'lineChildren',
 			});
 
+			// eslint-disable-next-line no-unused-vars
 			const splitParent = new SplitText(headerRef.current, {
 				type: 'lines',
 				linesClass: 'lineParent',
@@ -39,6 +40,7 @@ export default function LandingHeader({
 							linesClass: 'lineChildren',
 						});
 
+						// eslint-disable-next-line no-unused-vars
 						const splitParentText = new SplitText(textRef.current, {
 							type: 'lines',
 							linesClass: 'lineParent',

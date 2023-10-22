@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './style.css';
 // import CustomCursorContext from "./context/CustomCursorContext";
 
