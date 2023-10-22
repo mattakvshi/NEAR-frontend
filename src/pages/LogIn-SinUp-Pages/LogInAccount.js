@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import LogInFramework from '../../components/LogIn-SingUp/LogInFramework/LogInFramework';
 
@@ -6,11 +6,11 @@ import InputComponent from '../../components/LogIn-SingUp/InputComponent/InputCo
 import CheckBoxComponent from '../../components/LogIn-SingUp/CheckBoxComponent/CheckBoxComponent';
 import StartModal from '../../components/LandingComponents/StartModal/StartModal';
 import PasswordInput from '../../components/LogIn-SingUp/InputComponent/PasswordInput';
+import SliderComponent from '../../components/LogIn-SingUp/SliderComponent/SliderComponent';
 
 const LogInAccount = ({ AccLogImg, logoImg }) => {
 	const [modalActive, setModalActive] = useState(false);
 
-	const [activePath, setActivePath] = useState(1);
 	const [slides, setSlides] = useState([
 		{
 			text: 'You will be able to add your loved ones to friends, create templates for sending emergency notifications, create groups for convenient mailing, as well as subscribe to notifications from communities that always keep their finger on the pulse.',
@@ -26,32 +26,6 @@ const LogInAccount = ({ AccLogImg, logoImg }) => {
 		},
 	]);
 
-	const handleSVGClick = clickedPath => {
-		setActivePath(clickedPath);
-
-		const updatedSlides = slides.map((slide, i) => {
-			if (i === clickedPath - 1) {
-				return { ...slide, active: true };
-			} else {
-				return { ...slide, active: false };
-			}
-		});
-		setSlides(updatedSlides);
-	};
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setActivePath(prevActivePath => {
-				const nextActivePath = (prevActivePath % slides.length) + 1;
-				handleSVGClick(nextActivePath);
-				return nextActivePath;
-			});
-		}, 7000);
-		return () => {
-			clearInterval(interval);
-		};
-	}, [slides]);
-
 	return (
 		<>
 			<LogInFramework img={AccLogImg} opacity={0.38}>
@@ -62,41 +36,7 @@ const LogInAccount = ({ AccLogImg, logoImg }) => {
 							<h1 className='lif-logo-text'>NEAR</h1>
 						</div>
 						<div className='lif-title'>Log in and...</div>
-						{slides.map(
-							(slide, i) =>
-								slide.active && (
-									<div key={i} className='lif-text'>
-										{slide.text}
-									</div>
-								)
-						)}
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							width='134'
-							height='6'
-							viewBox='0 0 134 6'
-							fill='none'
-							className='lif-slider-svg'
-						>
-							<path
-								d={`M0 3H48`}
-								stroke={activePath === 1 ? '#D2D2D2' : '#9E9E9E'}
-								strokeWidth={activePath === 1 ? '5' : '2'}
-								onClick={() => handleSVGClick(1)}
-							/>
-							<path
-								d={`M59.5 3H91.5`}
-								stroke={activePath === 2 ? '#D2D2D2' : '#9E9E9E'}
-								strokeWidth={activePath === 2 ? '5' : '2'}
-								onClick={() => handleSVGClick(2)}
-							/>
-							<path
-								d={`M101.5 3H133.5`}
-								stroke={activePath === 3 ? '#D2D2D2' : '#9E9E9E'}
-								strokeWidth={activePath === 3 ? '5' : '2'}
-								onClick={() => handleSVGClick(3)}
-							/>
-						</svg>
+						<SliderComponent slides={slides} setSlides={setSlides} />
 					</div>
 					<div className='lif__column2'>
 						<div className='form-desc'>
