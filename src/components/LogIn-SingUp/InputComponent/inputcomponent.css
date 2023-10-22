@@ -17,7 +17,7 @@
 	font-size: calc(var(--index) * 0.7);
 	height: 100%;
 	outline: 0;
-	padding: 4px 20px 0;
+	padding: calc(var(--index) * 0.1) calc(var(--index) * 0.69) 0;
 	width: 100%;
 }
 
@@ -27,29 +27,30 @@
 }
 
 .cut {
-	height: 20px;
+	border-radius: calc(var(--index) * 0.2);
+	height: calc(var(--index) * 0.69);
 	background-color: var(--light-bg);
-	left: 20px;
+	left: calc(var(--index) * 0.69);
 	position: absolute;
-	top: -20px;
+	top: calc(var(--index) * -0.69);
 	transform: translateY(0);
 	transition: transform 200ms;
 }
 
 .cut-short {
-	width: 50px;
+	width: calc(var(--index) * 1.7);
 }
 
 .input:focus ~ .cut,
 .input:not(:placeholder-shown) ~ .cut {
-	transform: translateY(8px);
+	transform: translateY(calc(var(--index) * 0.4));
 }
 
 .placeholder {
 	color: var(--text-color-light-dark70);
 	font-size: calc(var(--index) * 0.7);
 	left: calc(var(--index) * 0.75);
-	line-height: 14px;
+	line-height: calc(var(--index) * 0.6);
 	pointer-events: none;
 	position: absolute;
 	transform-origin: 0 50%;
@@ -59,7 +60,8 @@
 
 .input:focus ~ .placeholder,
 .input:not(:placeholder-shown) ~ .placeholder {
-	transform: translateY(-30px) translateX(10px) scale(0.75);
+	transform: translateY(calc(var(--index) * -1.06))
+		translateX(calc(var(--index) * 0.35)) scale(0.75);
 }
 
 .input:not(:placeholder-shown) ~ .placeholder {

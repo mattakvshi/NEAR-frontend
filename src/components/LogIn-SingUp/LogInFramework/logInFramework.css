@@ -18,13 +18,17 @@
 	background-color: var(--text-color-dark);
 }
 
-.lif-container-img {
-	background: cover no-repeat;
+.lif-img-wrapper {
 	position: absolute;
 	top: 0;
 	left: 0;
 
 	z-index: -1;
+	background: linear-gradient(to top, transparent, var(--dark-header));
+}
+
+.lif-container-img {
+	display: block;
 }
 
 .lif-main-container {
@@ -54,7 +58,18 @@
 	height: calc(var(--index) * 28);
 }
 
-.lif__column {
+.lif__column1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: left;
+	row-gap: calc(var(--index) * 1.2);
+
+	width: calc(var(--index) * 19);
+	height: calc(var(--index) * 26);
+}
+
+.lif__column2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -95,7 +110,7 @@
 	font-size: calc(var(--index) * 1.2);
 	font-style: normal;
 	font-weight: 700;
-	line-height: 45px;
+	line-height: calc(var(--index) * 1.8);
 }
 
 .lif-text {
@@ -103,7 +118,7 @@
 	font-size: calc(var(--index) * 0.6);
 	font-style: normal;
 	font-weight: 400;
-	line-height: 30px;
+	line-height: calc(var(--index) * 1.2);
 
 	margin-bottom: calc(var(--index) * 1);
 }
@@ -127,7 +142,7 @@
 	font-size: calc(var(--index) * 0.6);
 	font-style: normal;
 	font-weight: 400;
-	line-height: 22.53px;
+	line-height: calc(var(--index) * 0.6);
 }
 
 .lif-form__title {
@@ -135,7 +150,7 @@
 	font-size: calc(var(--index) * 1);
 	font-style: normal;
 	font-weight: 500;
-	line-height: 44px;
+	line-height: calc(var(--index) * 1.5);
 }
 
 .lif-input-section {
@@ -238,7 +253,7 @@
 	font-size: calc(var(--index) * 0.6);
 	font-style: normal;
 	font-weight: 400;
-	line-height: 22.53px;
+	line-height: calc(var(--index) * 0.7);
 }
 
 .forgot-pass {
@@ -246,7 +261,7 @@
 	font-size: calc(var(--index) * 0.6);
 	font-style: normal;
 	font-weight: 500;
-	line-height: 22.53px;
+	line-height: calc(var(--index) * 0.7);
 }
 
 .forgot-pass:hover {
@@ -254,7 +269,7 @@
 	font-size: calc(var(--index) * 0.6);
 	font-style: normal;
 	font-weight: 500;
-	line-height: 22.53px;
+	line-height: calc(var(--index) * 0.7);
 }
 
 .sorry-modal-text {
@@ -270,4 +285,32 @@
 .sorry-modal-text em {
 	color: var(--accent-color);
 	font-style: normal;
+}
+
+@media (max-width: 1080px) {
+	.lif__row {
+		justify-content: center;
+
+		width: calc(var(--index) * 35);
+		height: calc(var(--index) * 50);
+	}
+
+	.lif__column1 {
+		display: none;
+	}
+
+	.lif-container-img {
+		display: none;
+	}
+
+	.lif__column2 {
+		align-items: center;
+
+		width: calc(var(--index) * 35);
+		height: calc(var(--index) * 50);
+	}
+
+	.form-desc {
+		width: calc(var(--index) * 25);
+	}
 }

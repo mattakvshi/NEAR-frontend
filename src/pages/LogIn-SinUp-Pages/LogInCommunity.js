@@ -14,7 +14,7 @@ const LogInCommunity = ({ CommLogImg, logoImg }) => {
 		<>
 			<LogInFramework img={CommLogImg} opacity={0.45}>
 				<div className='lif__row'>
-					<div className='lif__column'>
+					<div className='lif__column1'>
 						<div className='lif-logo'>
 							<img src={logoImg} alt='' className='lif-logo__img' />
 							<h1 className='lif-logo-text'>NEAR</h1>
@@ -39,15 +39,19 @@ const LogInCommunity = ({ CommLogImg, logoImg }) => {
 							<path d='M101.5 3H133.5' stroke='#9E9E9E' strokeWidth='2' />
 						</svg>
 					</div>
-					<div className='lif__column'>
+					<div className='lif__column2'>
 						<div className='form-desc'>
 							<p className='letsgo-text'>WELCOME BACK</p>
 							<h4 className='lif-form__title'>Log In as a Community</h4>
 							<div className='lif-input-section'>
-								<InputComponent id='email' type='email' width='66px'>
+								<InputComponent
+									id='email'
+									type='email'
+									width='calc(var(--index) * 2.18)'
+								>
 									Email
 								</InputComponent>
-								<PasswordInput id='password' width='94px'>
+								<PasswordInput id='password' width='calc(var(--index) * 3.34)'>
 									Password
 								</PasswordInput>
 							</div>

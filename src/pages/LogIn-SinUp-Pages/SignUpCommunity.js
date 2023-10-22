@@ -8,7 +8,7 @@ const SingUpCommunity = ({ CommCreateImg, logoImg }) => {
 	return (
 		<LogInFramework img={CommCreateImg} opacity={0.43}>
 			<div className='lif__row'>
-				<div className='lif__column'>
+				<div className='lif__column1'>
 					<div className='lif-logo'>
 						<img src={logoImg} alt='' className='lif-logo__img' />
 						<h1 className='lif-logo-text'>NEAR</h1>
@@ -33,24 +33,40 @@ const SingUpCommunity = ({ CommCreateImg, logoImg }) => {
 						<path d='M101.5 3H133.5' stroke='#9E9E9E' strokeWidth='2' />
 					</svg>
 				</div>
-				<div className='lif__column'>
+				<div className='lif__column2'>
 					<div className='form-desc'>
 						<p className='letsgo-text'>LET'S GET YOU STARTED</p>
 						<h4 className='lif-form__title'>Create a Community</h4>
 						<div className='lif-input-section'>
-							<InputComponent id='name' type='text' width='162px'>
+							<InputComponent
+								id='name'
+								type='text'
+								width='calc(var(--index) * 5.58'
+							>
 								Community name
 							</InputComponent>
-							<InputComponent id='email' type='email' width='66px'>
+							<InputComponent
+								id='email'
+								type='email'
+								width='calc(var(--index) * 2.18)'
+							>
 								Email
 							</InputComponent>
-							<PasswordInput id='password' width='94px'>
+							<PasswordInput id='password' width='calc(var(--index) * 3.34)'>
 								Password
 							</PasswordInput>
-							<InputComponent id='location' type='text' width='158px'>
+							<InputComponent
+								id='location'
+								type='text'
+								width='calc(var(--index) * 5.35)'
+							>
 								Monitoring region
 							</InputComponent>
-							<InputComponent id='emergency' type='text' width='144px'>
+							<InputComponent
+								id='emergency'
+								type='text'
+								width='calc(var(--index) * 5.05)'
+							>
 								Emergency type
 							</InputComponent>
 						</div>

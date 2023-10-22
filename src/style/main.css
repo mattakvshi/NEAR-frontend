@@ -24,6 +24,7 @@
 
 	--accent-color: #ff4c2b;
 	--accent-color90: rgba(255, 76, 43, 0.9);
+	--accent-color70: rgba(255, 76, 43, 0.7);
 
 	--index: calc(1vw + 1vh);
 }
