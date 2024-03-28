@@ -1,4 +1,4 @@
-# Frontend part of the NEAR application
+-# Frontend part of the NEAR application
 
 This is a repository from the frontend for the NEAR -platform application for convenient organization of emergency alerts.
 
@@ -14,4 +14,10 @@ The application is a learning project. Which I will be working on for two years.
 
 ## Technology stack
 
-ReactJS, CSS, HTML
+- ReactJS
+- Create-react-app
+- React Router 6
+- Locomotive Scroll
+- CSS
+- SCSS
+- HTML
