@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './utils/ScrollToTop';
 
 import Landing from './pages/Landing';
+
 import LogInAccount from './pages/LogIn-SinUp-Pages/LogInAccount';
 import LogInCommunity from './pages/LogIn-SinUp-Pages/LogInCommunity';
 import SingUpAccount from './pages/LogIn-SinUp-Pages/SignUpAccount';
@@ -18,6 +19,8 @@ import CommCreateImg from './img/SignUp-LogIn/Sing-in-Community.webp';
 //Логотип светлый
 //TODO: Загружать его только здесь и дальше везде передавать, не загружать заново
 import logoImg from './img/Landing/NEAR-logo-white.png';
+
+import MainApp from './pages/MainAppPages/MainApp';
 
 function App() {
 	return (
@@ -38,7 +41,7 @@ function App() {
 						}
 					/>
 
-					{/* Create - Log in */}
+					{/* Sing up - Log in */}
 					<Route
 						path='/NEAR-frontend/login/account'
 						element={<LogInAccount AccLogImg={AccLogImg} logoImg={logoImg} />}
@@ -64,6 +67,9 @@ function App() {
 							/>
 						}
 					/>
+
+					{/* MainApp */}
+					<Route path='/NEAR-frontend/:id/*' element={<MainApp />} />
 				</Routes>
 			</Router>
 		</div>

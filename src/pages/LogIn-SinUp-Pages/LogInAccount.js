@@ -67,9 +67,11 @@ const LogInAccount = ({ AccLogImg, logoImg }) => {
 									</p>
 								</div>
 							</div>
-							<button className='lif-button'>
-								<span>GER STARTED</span>
-							</button>
+							<NavLink to='/NEAR-frontend/mattakvshi/'>
+								<button className='lif-button'>
+									<span>GER STARTED</span>
+								</button>
+							</NavLink>
 							<div className='lif-link__row'>
 								<p className='lif-link__text'>New User?</p>
 								<NavLink

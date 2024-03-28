@@ -9,6 +9,8 @@
 	--light-bg80: rgba(210, 210, 210, 0.8);
 	--light-bg0: rgba(210, 210, 210, 0);
 
+	--gray-bg: #c4c4c4;
+
 	--dark-header: rgba(10, 31, 50, 0.67);
 	--dark-desc: rgba(10, 31, 50, 0.3);
 	--text-color-dark: #0a1f32;
