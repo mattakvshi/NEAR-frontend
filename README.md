@@ -1,4 +1,4 @@
--# Frontend part of the NEAR application
+# Frontend part of the NEAR application
 
 This is a repository from the frontend for the NEAR -platform application for convenient organization of emergency alerts.
 
