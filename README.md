@@ -60,7 +60,6 @@ The application is a learning project. Which I will be working on for two years.
 ![14](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-13.png)
 ![15](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-14.png)
 ![16](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-15.png)
-![17](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-16.png)
 
 
 
