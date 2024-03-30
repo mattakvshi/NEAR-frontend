@@ -24,12 +24,12 @@ The application is a learning project. Which I will be working on for two years.
 
 ---
 
-Это учебный проект в рамках курсовых и дипломной работы для Кубанского государственного университета. Репазиторий с backend лежит тут, а с мобильным кдиентом здесь.
+Это учебный проект в рамках курсовых и дипломной работы для Кубанского государственного университета. Репазиторий с backend лежит [тут](https://github.com/mattakvshi/NEAR-backend), а с мобильным кдиентом [здесь](https://github.com/mattakvshi/NEAR-mobile).
 Ещё можно глянуть:
-- Макет пользовательского интерфейс в Figma
-- Пользовательские экраны
-- Экраны организаций
-- Лендинг и регистрация 
+- [Макет пользовательского интерфейс в Figma](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/NEAR%20Frontend%20Maket.fig)
+- [Пользовательские экраны](https://github.com/mattakvshi/NEAR-frontend/tree/master/Макеты%20frontend/User%20screen)
+- [Экраны организаций](https://github.com/mattakvshi/NEAR-frontend/tree/master/Макеты%20frontend/Community%20screen)
+- [Лендинг и регистрация](https://github.com/mattakvshi/NEAR-frontend/tree/master/Макеты%20frontend/Log%20in%20group)
 
 ---
 
@@ -44,4 +44,23 @@ The application is a learning project. Which I will be working on for two years.
 - HTML
 
 # Project presentation
+![1](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-0.png)
+![2](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-1.png)
+![3](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-2.png)
+![4](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-3.png)
+![5](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-4.png)
+![6](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-5.png)
+![7](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-6.png)
+![8](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-7.png)
+![9](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-8.png)
+![10](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-9.png)
+![11](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-10.png)
+![12](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-11.png)
+![13](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-12.png)
+![14](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-13.png)
+![15](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-14.png)
+![16](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-15.png)
+![17](https://github.com/mattakvshi/NEAR-frontend/blob/master/Макеты%20frontend/Презентация%20продукта/71c5bd96130e7b6d96c14cdbc53d7383-16.png)
+
+
 
