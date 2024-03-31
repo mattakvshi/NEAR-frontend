@@ -189,8 +189,24 @@ nav ul.nav-list-center li a:active:after {
 }
 
 .main-section {
+	display: flex;
+	flex-direction: column;
+	row-gap: calc(var(--index) * 1.2);
+
 	width: 100%;
 	background-color: var(--gray-bg);
+
+	padding: calc(var(--index) * 1.2) calc(var(--index) * 2.5);
+}
+
+.main-section__header {
+	width: 100%;
+	height: auto;
+}
+
+.main-section__body {
+	width: 100%;
+	height: auto;
 }
 
 @keyframes fadeBackground {

@@ -2,6 +2,7 @@ const usersInfo = [
 	{
 		id: 'mattakvshi',
 		name: 'Maksim',
+		profileImg: `${process.env.PUBLIC_URL}/tmpProfileImg/8_IMG_3596.jpg`,
 		groups: [
 			{
 				groupID: '23455',
@@ -31,7 +32,7 @@ const usersInfo = [
 			},
 			{
 				groupID: '73898',
-				groupName: 'Neighbors',
+				groupName: 'Homies',
 				selectedColor: '#480059',
 			},
 		],
