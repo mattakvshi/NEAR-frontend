@@ -119,15 +119,19 @@ const MainApp = () => {
 						</h3>
 						<nav className='nav-block'>
 							<ul className='nav-list-origin'>
-								{currentUser.groups.map(group => {
-									return (
-										<NavGroupItem
-											key={group.groupID}
-											groupName={group.groupName}
-											selectedColor={group.selectedColor}
-										/>
-									);
-								})}
+								{'groups' in currentUser ? (
+									currentUser.groups.map(group => {
+										return (
+											<NavGroupItem
+												key={group.groupID}
+												groupName={group.groupName}
+												selectedColor={group.selectedColor}
+											/>
+										);
+									})
+								) : (
+									<div>Create group</div>
+								)}
 							</ul>
 						</nav>
 					</div>
@@ -172,14 +176,14 @@ const MainApp = () => {
 				</div>
 				<div className='main-section__body'>
 					<Routes>
-						<Route path='' element={<Dashboard userInfo={currentUser} />} />
+						<Route path='' element={<Dashboard currentUser={currentUser} />} />
 						<Route
 							path='friends'
-							element={<FriendsList userInfo={currentUser} />}
+							element={<FriendsList currentUser={currentUser} />}
 						/>
 						<Route
 							path='subscriptions'
-							element={<SubscriptionsList userInfo={currentUser} />}
+							element={<SubscriptionsList currentUser={currentUser} />}
 						/>
 					</Routes>
 				</div>

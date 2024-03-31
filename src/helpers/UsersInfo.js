@@ -15,6 +15,7 @@ const usersInfo = [
 				selectedColor: '#FF4C2B',
 			},
 		],
+		templates: [{ id: '1' }, { id: '3' }],
 	},
 	{
 		id: '2',
@@ -36,6 +37,7 @@ const usersInfo = [
 				selectedColor: '#480059',
 			},
 		],
+		templates: [{ id: '2' }, { id: '4' }, { id: '5' }, { id: '6' }],
 	},
 	{
 		id: '3',
@@ -68,6 +70,10 @@ const usersInfo = [
 				selectedColor: '#ff9309',
 			},
 		],
+	},
+	{
+		id: '5',
+		name: 'Yura',
 	},
 ];
 

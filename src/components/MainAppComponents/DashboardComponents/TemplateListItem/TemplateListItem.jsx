@@ -1,7 +1,7 @@
-const TemplateListItem = () => {
+const TemplateListItem = ({ title }) => {
 	return (
 		<li>
-			<div></div>
+			<div>{title}</div>
 			<div></div>
 		</li>
 	);
