@@ -7,6 +7,9 @@ import bell from '../../../img/mdi_bell.png';
 import groupsImg from '../../../img/NEAR-user-group.png';
 import submitedTemplatesImg from '../../../img/NEAR-sentNotification-icon копия.png';
 import sos from '../../../img/MainAppIcon/Group 33514.png';
+import plus from '../../../img/MainAppIcon/Vector.svg';
+import profileTmpImg from '../../../img/NEAR-user-small.png';
+import arrow from '../../../img/MainAppIcon/Line 39.svg';
 
 const Dashboard = ({ currentUser }) => {
 	const currentTemplatesList = () => {
@@ -32,6 +35,9 @@ const Dashboard = ({ currentUser }) => {
 							<br /> notification
 							<br /> template
 						</h5>
+						<div className='plus-wrapper'>
+							<img className='plus' src={plus} alt='plus' />
+						</div>
 					</div>
 				</div>
 				<div className='actions-row__item'>
@@ -45,6 +51,25 @@ const Dashboard = ({ currentUser }) => {
 							Create new
 							<br /> group
 						</h5>
+						<img
+							className='user-small user-small1'
+							src={profileTmpImg}
+							alt='profileTmpImg'
+						/>
+						<img
+							className='user-small user-small2'
+							src={profileTmpImg}
+							alt='profileTmpImg'
+						/>
+						<img
+							className='user-small user-small3'
+							src={profileTmpImg}
+							alt='profileTmpImg'
+						/>
+						<div className='user-small user-count'>25+</div>
+						<div className='arrow-wrapper'>
+							<img className='arrow' src={arrow} alt='arrow' />
+						</div>
 					</div>
 				</div>
 				<div className='actions-row__item'>
@@ -58,6 +83,7 @@ const Dashboard = ({ currentUser }) => {
 							src={submitedTemplatesImg}
 							alt='submitedTemplatesImg'
 						/>
+						<div className='open-wrapper'>Open</div>
 					</div>
 				</div>
 				<div className='actions-row__item'>
