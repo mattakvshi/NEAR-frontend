@@ -25,6 +25,7 @@
 }
 
 .item-block-type1 {
+	position: relative;
 	width: 100%;
 	height: 100%;
 
@@ -33,6 +34,7 @@
 }
 
 .item-block-type2 {
+	position: relative;
 	width: 100%;
 	height: 100%;
 
@@ -42,15 +44,6 @@
 }
 
 .item-block-type3 {
-	position: relative;
-	width: 100%;
-	height: 100%;
-
-	border: calc(var(--index) * 0.09) var(--dark-desc) dashed;
-	border-radius: calc(var(--index) * 0.4);
-}
-
-.item-block-type4 {
 	position: absolute;
 	top: 7%;
 	right: 7%;
@@ -60,6 +53,70 @@
 
 	border-radius: calc(var(--index) * 0.4);
 	background-color: var(--accent-color);
+}
+
+.tools-img-top-right {
+	position: absolute;
+	top: 2%;
+	right: 2%;
+}
+
+.tools-center-img1 {
+	position: absolute;
+	top: 32%;
+	left: 20%;
+
+	width: calc(var(--index) * 4.6);
+	height: calc(var(--index) * 4.6);
+}
+
+.tools-center-img2 {
+	position: absolute;
+	top: 10%;
+	left: 18%;
+
+	width: calc(var(--index) * 6);
+}
+
+.bell {
+	width: calc(var(--index) * 1.5);
+	height: calc(var(--index) * 1.5);
+}
+
+.groupsImg {
+	width: calc(var(--index) * 1.9);
+	height: calc(var(--index) * 1.9);
+}
+
+.tools-text {
+	font-size: calc(var(--index) * 0.8);
+	font-weight: 600;
+	line-height: calc(var(--index) * 1.2);
+}
+
+.text-type1 {
+	position: absolute;
+	top: 25%;
+	left: 15%;
+}
+
+.text-type2 {
+	position: absolute;
+	top: 5%;
+	left: 15%;
+}
+
+.text-type3 {
+	position: absolute;
+	top: 70%;
+	left: 11%;
+
+	width: calc(var(--index) * 7);
+
+	font-size: calc(var(--index) * 0.5);
+	font-weight: 500;
+	color: var(--light-bg);
+	text-align: center;
 }
 
 .templates-row {
