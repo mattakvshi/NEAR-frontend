@@ -25,7 +25,7 @@ const Dashboard = ({ currentUser }) => {
 	//console.log(currentTemplatesList);
 
 	return (
-		<div className='dashboard-wrapper'>
+		<section className='dashboard-wrapper' data-scroll-section>
 			<div className='actions-row'>
 				<div className='actions-row__item'>
 					<div className='item-block-type1'>
@@ -103,7 +103,17 @@ const Dashboard = ({ currentUser }) => {
 					{currentTemplatesList() ? (
 						currentTemplatesList().map(template => {
 							return (
-								<TemplateListItem key={template.id} title={template.title} />
+								<TemplateListItem
+									key={template.id}
+									title={template.title}
+									selectedImg={
+										'selectedImg' in template
+											? template.selectedImg
+											: `${process.env.PUBLIC_URL}/tmpTemplatesImg/NEAR-template-notification-icon.png`
+									}
+									emergencyType={template.emergencyType}
+									date={template.date}
+								/>
 							);
 						})
 					) : (
@@ -111,7 +121,7 @@ const Dashboard = ({ currentUser }) => {
 					)}
 				</ul>
 			</div>
-		</div>
+		</section>
 	);
 };
 
