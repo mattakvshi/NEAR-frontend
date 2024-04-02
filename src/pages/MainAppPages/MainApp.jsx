@@ -11,6 +11,8 @@ import FriendsList from './Friends/FriendsList';
 import SubscriptionsList from './Subscriptions/SubscriptionsList';
 import Header from '../../components/MainAppComponents/Header/Header';
 
+import useLocoScroll from '../../hooks/useLocoScrollForMainApp.js';
+
 import mainLogo from '../../img/NEAR-logo.png';
 import dashboardSvg from '../../img/MainAppIcon/ic_sharp-dashboard.svg';
 import dashboardSvgActive from '../../img/MainAppIcon/ic_sharp-dashboard-active.svg';
@@ -37,6 +39,8 @@ const MainApp = () => {
 	//console.log('profileImg' in currentUser);
 
 	//console.log('Текущий пользователь: ', currentUser);
+	const start = true;
+	useLocoScroll(start);
 
 	return (
 		<div className='app-wrapper'>
@@ -114,9 +118,11 @@ const MainApp = () => {
 					</div>
 
 					<div className='group-container'>
-						<h3 className='nav-title' title='To groups list'>
-							GROUPS
-						</h3>
+						<Link className='nav-title-link' to=''>
+							<h3 className='nav-title' title='To groups list'>
+								GROUPS
+							</h3>
+						</Link>
 						<nav className='nav-block'>
 							<ul className='nav-list-origin'>
 								{'groups' in currentUser ? (
@@ -147,7 +153,7 @@ const MainApp = () => {
 								</li>
 								<li className='nav-item'>
 									<img src={logOutSvg} alt='logOutIcon' />
-									<Link className='nav-item-medium' to='friends'>
+									<Link className='nav-item-medium' to='/NEAR-frontend/'>
 										Log Out
 									</Link>
 								</li>
@@ -174,18 +180,27 @@ const MainApp = () => {
 						}
 					/>
 				</div>
-				<div className='main-section__body'>
-					<Routes>
-						<Route path='' element={<Dashboard currentUser={currentUser} />} />
-						<Route
-							path='friends'
-							element={<FriendsList currentUser={currentUser} />}
-						/>
-						<Route
-							path='subscriptions'
-							element={<SubscriptionsList currentUser={currentUser} />}
-						/>
-					</Routes>
+				<div className='main-section__body-wrapper'>
+					<main
+						className='main-section__body'
+						id='main-section__body'
+						data-scroll-container
+					>
+						<Routes>
+							<Route
+								path=''
+								element={<Dashboard currentUser={currentUser} />}
+							/>
+							<Route
+								path='friends'
+								element={<FriendsList currentUser={currentUser} />}
+							/>
+							<Route
+								path='subscriptions'
+								element={<SubscriptionsList currentUser={currentUser} />}
+							/>
+						</Routes>
+					</main>
 				</div>
 			</div>
 		</div>

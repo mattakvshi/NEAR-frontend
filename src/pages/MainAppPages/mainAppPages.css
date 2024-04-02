@@ -1,4 +1,6 @@
 .app-wrapper {
+	overflow: hidden;
+
 	width: 100vw;
 	height: 100vh;
 	display: grid;
@@ -10,7 +12,7 @@
 	flex-direction: column;
 	row-gap: calc(var(--index) * 2);
 
-	height: 100%;
+	height: 100vh;
 
 	padding: calc(var(--index) * 1.1) calc(var(--index) * 1)
 		calc(var(--index) * 1.1) calc(var(--index) * 1.2);
@@ -135,6 +137,37 @@ nav ul.nav-list-center li a:active:after {
 	opacity: 1;
 } */
 
+.nav-title-link h3 {
+}
+
+.nav-title-link h3 {
+	position: relative;
+}
+.nav-title-link h3:after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 0%;
+	content: '.';
+	color: transparent;
+	background: #aaa;
+	height: 1px;
+}
+.nav-title-link h3:hover:after {
+	width: 26%;
+}
+
+.nav-title-link h3 {
+	transition: all 0.5s weight 0s;
+}
+
+.nav-title-link h3:active {
+	color: #fff;
+	z-index: 1;
+	opacity: 0.3;
+}
+
 .main-nav-item-active {
 	display: flex;
 	flex-direction: row;
@@ -191,17 +224,25 @@ nav ul.nav-list-center li a:active:after {
 .main-section {
 	display: flex;
 	flex-direction: column;
-	row-gap: calc(var(--index) * 1.2);
 
 	width: 100%;
 	background-color: var(--gray-bg);
+}
 
-	padding: calc(var(--index) * 1.2) calc(var(--index) * 2.5);
+.main-section__body-wrapper {
+	width: 100%;
+	padding: calc(var(--index) * 1) calc(var(--index) * 2.5)
+		calc(var(--index) * 1.2);
 }
 
 .main-section__header {
+	z-index: 99;
 	width: 100%;
-	height: auto;
+	height: 10vh;
+
+	padding: calc(var(--index) * 1) calc(var(--index) * 2.5);
+
+	background-color: var(--gray-bg);
 }
 
 .main-section__body {
