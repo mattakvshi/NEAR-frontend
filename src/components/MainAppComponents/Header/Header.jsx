@@ -7,9 +7,14 @@ import './header.css';
 import moon from '../../../img/MainAppIcon/moon.svg';
 import sun from '../../../img/MainAppIcon/sun.svg';
 
-const Header = ({ pageName, profileImg }) => {
-	const [isActiveDarkMode, setActiveDarkMode] = useState(false);
+const Header = ({ pageName, profileImg, toggleDarkMode }) => {
+	const [isActiveDarkModeLocale, setActiveDarkModeLocale] = useState(false);
 	//console.log(profileImg);
+
+	const toggleDarkModeLocale = () => {
+		setActiveDarkModeLocale(!isActiveDarkModeLocale)
+		toggleDarkMode()
+	  };
 
 	const [width, setWidth] = React.useState(window.innerWidth);
 	const breakpoint = 800;
@@ -28,13 +33,13 @@ const Header = ({ pageName, profileImg }) => {
 			<div className='header-row__left'>
 				<h1 className='page-title'>{pageName}</h1>
 				<button
-					onClick={() => setActiveDarkMode(!isActiveDarkMode)}
+					onClick={() => toggleDarkModeLocale()}
 					className='dark-mode-btn'
 				>
-					<p className={!isActiveDarkMode ? 'btn-item-active' : 'btn-item'}>
+					<p className={!isActiveDarkModeLocale ? 'btn-item-active' : 'btn-item'}>
 						{width < breakpoint ? <img src={sun} alt='sun' /> : 'Light mode'}
 					</p>
-					<p className={isActiveDarkMode ? 'btn-item-active' : 'btn-item'}>
+					<p className={isActiveDarkModeLocale ? 'btn-item-active' : 'btn-item'}>
 						{width < breakpoint ? <img src={moon} alt='moon' /> : 'Dark mode'}
 					</p>
 				</button>

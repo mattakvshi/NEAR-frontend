@@ -42,6 +42,7 @@
 	color: var(--text-color-light-dark70);
 }
 
+
 .btn-item-active {
 	font-size: calc(var(--index) * 0.445);
 	font-weight: 600;

@@ -42,8 +42,14 @@ const MainApp = () => {
 	const start = true;
 	useLocoScroll(start);
 
+	const [isDarkMode, setIsDarkMode] = useState(false);
+
+  	const toggleDarkMode = () => {
+    	setIsDarkMode(!isDarkMode);
+  	};
+
 	return (
-		<div className='app-wrapper'>
+		<div className={isDarkMode ? 'app-wrapper dark-theme' : 'app-wrapper'}>
 			<div className='left-nav-section'>
 				<NavLink to='' title='To home'>
 					<div className='logo'>
@@ -178,6 +184,7 @@ const MainApp = () => {
 								? currentUser.profileImg
 								: `${process.env.PUBLIC_URL}/tmpProfileImg/NEAR-user-small.png`
 						}
+						toggleDarkMode={toggleDarkMode}
 					/>
 				</div>
 				<div className='main-section__body-wrapper'>

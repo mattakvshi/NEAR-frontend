@@ -1,3 +1,31 @@
+.dark-theme {
+	--extra-light: #222;
+	--light-bg: #333;
+	--light-bg80: rgba(51, 51, 51, 0.8);
+	--light-bg0: rgba(51, 51, 51, 0);
+  
+	--gray-bg: #444;
+	--gray-dark-bg: #555;
+  
+	--dark-header: rgba(255, 255, 255, 0.67);
+	--dark-desc: rgba(255, 255, 255, 0.3);
+	--text-color-dark: #fff;
+  
+	--text-color-medium-dark: #ccc;
+	--text-color-medium-dark90: rgba(204, 204, 204, 0.9);
+  
+	--text-color-light-dark: #bbb;
+	--text-color-light-dark50: rgba(187, 187, 187, 0.5);
+	--text-color-light-dark60: rgba(187, 187, 187, 0.6);
+	--text-color-light-dark70: rgba(187, 187, 187, 0.7);
+	--text-color-light-dark90: rgba(187, 187, 187, 0.9);
+	--text-color-light-dark0: rgba(187, 187, 187, 0);
+  
+	--accent-color: #4caf50;
+	--accent-color90: rgba(76, 175, 80, 0.9);
+	--accent-color70: rgba(76, 175, 80, 0.7);
+}
+
 .app-wrapper {
 	overflow: hidden;
 
