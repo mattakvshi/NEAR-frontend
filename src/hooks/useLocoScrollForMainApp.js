@@ -10,6 +10,7 @@ export default function useLocoScroll(start) {
 	useEffect(() => {
 		if (!start) return;
 		let locoScroll = null;
+		let scrollEnd = true;
 
 		const scrollEl = document.querySelector('#main-section__body');
 
@@ -22,6 +23,10 @@ export default function useLocoScroll(start) {
 			class: 'is-reveal',
 		});
 
+		const ReFrEsH = () => {
+			if (scrollEnd) ScrollTrigger.refresh();
+		};
+
 		// Функция для проверки достижения конца области прокрутки
 		const handleScrollEnd = () => {
 			const scrollPosition = locoScroll.scroll.instance.scroll.y;
@@ -29,13 +34,18 @@ export default function useLocoScroll(start) {
 
 			//console.log(scrollPosition, scrollLimit.y - 200);
 
-			if (scrollPosition >= scrollLimit.y - 200) {
-				ScrollTrigger.refresh();
+			if (scrollPosition >= scrollLimit.y) {
+				ReFrEsH(scrollEnd);
 				ScrollTrigger.update();
 				//console.log('Долистал до низа');
+				scrollEnd = !scrollEnd;
+				locoScroll.stop();
+				setTimeout(1000);
+				locoScroll.start();
 			} else {
 				ScrollTrigger.update();
 				//console.log('Листаю');
+				//console.log(locoScroll.scroll.instance);
 			}
 		};
 
