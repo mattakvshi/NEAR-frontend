@@ -25,7 +25,7 @@ const FriendsList = ({ currentUser, preloaderSvg, useLocoScroll }) => {
 		}
 	}, [timer]);
 
-	useLocoScroll(!(timer > 0), '2');
+	useLocoScroll(!(timer > 0));
 
 	return (
 		<>

@@ -47,7 +47,7 @@ const Dashboard = ({ currentUser, preloaderSvg, useLocoScroll }) => {
 		}
 	}, [timer]);
 
-	useLocoScroll(!(timer > 0), '1');
+	useLocoScroll(!(timer > 0));
 
 	return (
 		<>

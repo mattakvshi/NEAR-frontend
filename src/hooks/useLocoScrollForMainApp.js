@@ -6,7 +6,7 @@ import 'locomotive-scroll/src/locomotive-scroll.scss';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function useLocoScroll(start, param) {
+export default function useLocoScroll(start) {
 	useEffect(() => {
 		if (!start) return;
 		let locoScroll = null;
@@ -18,7 +18,7 @@ export default function useLocoScroll(start, param) {
 		locoScroll = new LocomotiveScroll({
 			el: scrollEl,
 			smooth: true,
-			multiplier: 1.3,
+			multiplier: 1,
 			class: 'is-reveal',
 		});
 
@@ -29,7 +29,7 @@ export default function useLocoScroll(start, param) {
 
 			//console.log(scrollPosition, scrollLimit.y - 200);
 
-			if (scrollPosition >= scrollLimit.y) {
+			if (scrollPosition >= scrollLimit.y - 200) {
 				ScrollTrigger.refresh();
 				ScrollTrigger.update();
 				//console.log('Долистал до низа');
@@ -75,7 +75,7 @@ export default function useLocoScroll(start, param) {
 				ScrollTrigger.removeEventListener('refresh', lsUpdate);
 				locoScroll.destroy();
 				locoScroll = null;
-				console.log('Kill', locoScroll, param);
+				console.log('Kill', locoScroll);
 			}
 		};
 	}, [start]);

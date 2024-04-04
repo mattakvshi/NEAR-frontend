@@ -24,7 +24,7 @@ const SubscriptionsList = ({ currentUser, preloaderSvg, useLocoScroll }) => {
 		}
 	}, [timer]);
 
-	useLocoScroll(!(timer > 0), '3');
+	useLocoScroll(!(timer > 0));
 	return (
 		<>
 			{timer > 0 ? (
