@@ -19,6 +19,8 @@ import StartModal from '../components/LandingComponents/StartModal/StartModal';
 import accountPng from '../img/Landing/NEAR-account-png-icon.png';
 import communityPng from '../img/Landing/NEAR-community-png-icon.png';
 
+import loadStateSvg from '../img/Landing/bouncing-circles.svg';
+
 //Импорты для компонентов, фотографии которые гружу, использую прелоудер пока грузятся
 import headerBgImg from '../img/Landing/header-bg.webp';
 import descImg from '../img/Landing/desc-img.webp';
@@ -101,10 +103,11 @@ const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {
 
 			{preloader || timer > 0 ? (
 				<div className='loader-wrapper absolute'>
-					<h1 className='title-1'>
+					<h1 className='title-1-preloader'>
 						<em>NEAR</em>
 					</h1>
-					<h2 className='title-1'>loading</h2>
+					<h2 className='title-2-preloader'>loading</h2>
+					<img className='load-svg' src={loadStateSvg} alt='loadStateSvg' />
 				</div>
 			) : (
 				<main className='wrapper' id='wrapper' data-scroll-container>

@@ -32,7 +32,6 @@
 
 	--index: calc(1vw + 1vh);
 }
-  
 
 html,
 body {
@@ -71,6 +70,27 @@ main {
 
 	background-color: var(--light-bg);
 	color: var(--text-color-dark);
+}
+
+.load-svg {
+	width: calc(var(--index) * 3);
+}
+
+.title-1-preloader {
+	text-align: center;
+	font-size: calc(var(--index) * 4);
+	font-weight: 700;
+}
+
+.title-1-preloader em {
+	color: var(--accent-color);
+	font-style: normal;
+}
+
+.title-2-preloader {
+	text-align: center;
+	font-size: calc(var(--index) * 2);
+	font-weight: 600;
 }
 
 .title-1 {
