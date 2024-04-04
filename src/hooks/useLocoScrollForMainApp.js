@@ -6,7 +6,7 @@ import 'locomotive-scroll/src/locomotive-scroll.scss';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function useLocoScroll(start) {
+export default function useLocoScroll(start, param) {
 	useEffect(() => {
 		if (!start) return;
 		let locoScroll = null;
@@ -18,13 +18,29 @@ export default function useLocoScroll(start) {
 		locoScroll = new LocomotiveScroll({
 			el: scrollEl,
 			smooth: true,
-			multiplier: 1.5,
+			multiplier: 1.3,
 			class: 'is-reveal',
 		});
 
-		locoScroll.on('scroll', () => {
-			ScrollTrigger.update();
-		});
+		// Функция для проверки достижения конца области прокрутки
+		const handleScrollEnd = () => {
+			const scrollPosition = locoScroll.scroll.instance.scroll.y;
+			const scrollLimit = locoScroll.scroll.instance.limit;
+
+			//console.log(scrollPosition, scrollLimit.y - 200);
+
+			if (scrollPosition >= scrollLimit.y) {
+				ScrollTrigger.refresh();
+				ScrollTrigger.update();
+				//console.log('Долистал до низа');
+			} else {
+				ScrollTrigger.update();
+				//console.log('Листаю');
+			}
+		};
+
+		// Слушаем событие прокрутки
+		locoScroll.on('scroll', handleScrollEnd);
 
 		ScrollTrigger.scrollerProxy(scrollEl, {
 			scrollTop(value) {
@@ -59,7 +75,7 @@ export default function useLocoScroll(start) {
 				ScrollTrigger.removeEventListener('refresh', lsUpdate);
 				locoScroll.destroy();
 				locoScroll = null;
-				console.log('Kill', locoScroll);
+				console.log('Kill', locoScroll, param);
 			}
 		};
 	}, [start]);

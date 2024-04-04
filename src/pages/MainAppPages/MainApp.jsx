@@ -1,6 +1,7 @@
 import { Routes, Route, Link, NavLink } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
+
 import './mainAppPages.css';
 
 import { usersInfo } from '../../helpers/UsersInfo';
@@ -24,29 +25,27 @@ import settingsSvg from '../../img/MainAppIcon/settings.svg';
 import logOutSvg from '../../img/MainAppIcon/majesticons_logout-half-circle.svg';
 import NavGroupItem from '../../components/MainAppComponents/NavGroupItem/NavGroupItem';
 
+//Прелодер для дочерних роутов
+import preloaderSvg from '../../img/MainAppIcon/motion-blur-2.svg';
+
 const MainApp = () => {
 	const activeClass = ['active-item', 'main-nav-item-active'];
 	const defaultClass = ['nav-item-regular', 'main-nav-item'];
 
 	const [activeLinks, setActiveLinks] = useState([true, false, false]);
+	//const [preloaded, setPreloaded] = useState(false);
 
 	const params = useParams();
 	const currentID = params.id;
-
-	//console.log(currentID);
-
 	const currentUser = usersInfo.find(user => user.id === currentID);
-	//console.log('profileImg' in currentUser);
 
-	//console.log('Текущий пользователь: ', currentUser);
-	const start = true;
-	useLocoScroll(start);
+	//useLocoScroll();
 
 	const [isDarkMode, setIsDarkMode] = useState(false);
 
-  	const toggleDarkMode = () => {
-    	setIsDarkMode(!isDarkMode);
-  	};
+	const toggleDarkMode = () => {
+		setIsDarkMode(!isDarkMode);
+	};
 
 	return (
 		<div className={isDarkMode ? 'app-wrapper dark-theme' : 'app-wrapper'}>
@@ -196,15 +195,33 @@ const MainApp = () => {
 						<Routes>
 							<Route
 								path=''
-								element={<Dashboard currentUser={currentUser} />}
+								element={
+									<Dashboard
+										currentUser={currentUser}
+										preloaderSvg={preloaderSvg}
+										useLocoScroll={useLocoScroll}
+									/>
+								}
 							/>
 							<Route
 								path='friends'
-								element={<FriendsList currentUser={currentUser} />}
+								element={
+									<FriendsList
+										currentUser={currentUser}
+										preloaderSvg={preloaderSvg}
+										useLocoScroll={useLocoScroll}
+									/>
+								}
 							/>
 							<Route
 								path='subscriptions'
-								element={<SubscriptionsList currentUser={currentUser} />}
+								element={
+									<SubscriptionsList
+										currentUser={currentUser}
+										preloaderSvg={preloaderSvg}
+										useLocoScroll={useLocoScroll}
+									/>
+								}
 							/>
 						</Routes>
 					</main>
