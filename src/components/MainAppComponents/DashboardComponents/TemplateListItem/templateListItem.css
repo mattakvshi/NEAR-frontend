@@ -1,0 +1,41 @@
+/* Класс из Dashboard.jsx */
+.template-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	column-gap: calc(var(--index) * 2);
+}
+
+/* Местные классы */
+
+.template-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	column-gap: calc(var(--index) * 1);
+
+	background-color: var(--bg-light);
+	border-radius: calc(var(--index) * 4);
+}
+.template-wrapper__column {
+}
+
+.template-img {
+	width: 40px;
+	height: 40px;
+
+	border-radius: calc(var(--index) * 0.7);
+}
+
+.template-title {
+}
+
+.template-date {
+}
+
+.template-type {
+}
+
+.template-type__text {
+}

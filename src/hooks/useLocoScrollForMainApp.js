@@ -33,7 +33,10 @@ export default function useLocoScroll(start) {
 			const scrollLimit = locoScroll.scroll.instance.limit;
 
 			//console.log(scrollPosition, scrollLimit.y - 200);
-
+			//console.log(locoScroll.scroll.instance.limit);
+			if (scrollLimit.y === 0) {
+				return;
+			}
 			if (scrollPosition >= scrollLimit.y) {
 				ReFrEsH(scrollEnd);
 				ScrollTrigger.update();

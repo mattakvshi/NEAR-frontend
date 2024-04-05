@@ -134,7 +134,8 @@ const Dashboard = ({ currentUser, preloaderSvg, useLocoScroll }) => {
 					</div>
 					<div className='templates-row'>
 						<h1 className='templates-row__title'>My templates</h1>
-						<ul>
+						<ul className='template-list'>
+							{/* Стили для этого класса (template-list) решил прописать в файлике для стилей самого шаблона templateListItem.css*/}
 							{currentTemplatesList() ? (
 								currentTemplatesList().map(template => {
 									return (

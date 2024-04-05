@@ -12,7 +12,19 @@ const TemplateListItem = ({ title, selectedImg, emergencyType, date }) => {
 				<h5>{title}</h5>
 				<p>{date}</p>
 			</div>
-			<div className='template-wrapper__column'></div>
+			<div className='template-wrapper__column'>
+				<div
+					style={{ backgroundColor: emergencyType.bgColor }}
+					className='template-type'
+				>
+					<span
+						className='template-type__text'
+						style={{ color: emergencyType.color }}
+					>
+						{emergencyType.title}
+					</span>
+				</div>
+			</div>
 			<div className='template-wrapper__column'>
 				<img src={ellipsis} alt='ellipsis' />
 			</div>
