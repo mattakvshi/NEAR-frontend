@@ -45,13 +45,59 @@ const MainApp = () => {
 
 	const [isDarkMode, setIsDarkMode] = useState(false);
 
-	//Тяну тему из localStorage 1 раз при рендере компонента
 	useEffect(() => {
+		// Проверка активной ссылки в localeStorage
+		//console.log(window.location.href);
+		var regex = new RegExp(
+			'^http://localhost:3000/NEAR-frontend/[a-zA-Z0-9]+/?$'
+		);
+		//console.log(window.location.href.match(regex));
+		if (
+			localStorage.getItem('activeRout') === 'dashboard' ||
+			window.location.href.match(regex)
+		) {
+			setActiveLinks([true, false, false]);
+			localStorage.setItem('activeRout', 'dashboard');
+		} else if (localStorage.getItem('activeRout') === 'friends') {
+			setActiveLinks([false, true, false]);
+		} else if (localStorage.getItem('activeRout') === 'subscriptions') {
+			setActiveLinks([false, false, true]);
+		}
+		return () => {
+			//код здесь будет выполняться при размонтировании компонента
+		};
+	}, []);
+
+	useEffect(() => {
+		//localStorage.clear();
+		//1. Проверка тёмной темы на уровне системных настроек
+		if (
+			window.matchMedia &&
+			window.matchMedia('(prefers-color-scheme: dark)').matches
+		) {
+			setIsDarkMode(true);
+		}
+
+		//2. Проверка тёмной темы в localStorage
+		//Тяну тему из localStorage 1 раз при рендере компонента
 		if (localStorage.getItem('themesMode') === 'dark') {
 			setIsDarkMode(true);
 		} else if (localStorage.getItem('themesMode') === 'light') {
 			setIsDarkMode(false);
 		}
+
+		//Если меняются системные настройки меняем тему
+		window
+			.matchMedia('(prefers-color-scheme: dark)')
+			.addEventListener('change', event => {
+				const newColorScheme = event.matches ? 'dark' : 'light';
+
+				if (newColorScheme === 'dark') {
+					setIsDarkMode(true);
+				} else {
+					setIsDarkMode(false);
+				}
+			});
 	}, []);
 
 	const toggleDarkMode = () => {
@@ -60,10 +106,10 @@ const MainApp = () => {
 		//Записываю выбранную тему в localStorage
 		if (!isDarkMode) {
 			localStorage.setItem('themesMode', 'dark');
-			console.log(localStorage.getItem('themesMode'));
+			//console.log(localStorage.getItem('themesMode'));
 		} else {
 			localStorage.setItem('themesMode', 'light');
-			console.log(localStorage.getItem('themesMode'));
+			//console.log(localStorage.getItem('themesMode'));
 		}
 	};
 
@@ -95,7 +141,10 @@ const MainApp = () => {
 									/>
 									<NavLink
 										end
-										onClick={() => setActiveLinks([true, false, false])}
+										onClick={() => {
+											setActiveLinks([true, false, false]);
+											localStorage.setItem('activeRout', 'dashboard');
+										}}
 										className={({ isActive }) => {
 											return isActive ? activeClass[0] : defaultClass[0];
 										}}
@@ -112,7 +161,10 @@ const MainApp = () => {
 										alt='friendsIcon'
 									/>
 									<NavLink
-										onClick={() => setActiveLinks([false, true, false])}
+										onClick={() => {
+											setActiveLinks([false, true, false]);
+											localStorage.setItem('activeRout', 'friends');
+										}}
 										className={({ isActive }) => {
 											return isActive ? activeClass[0] : defaultClass[0];
 										}}
@@ -133,7 +185,10 @@ const MainApp = () => {
 										alt='subscriptionsIcon'
 									/>
 									<NavLink
-										onClick={() => setActiveLinks([false, false, true])}
+										onClick={() => {
+											setActiveLinks([false, false, true]);
+											localStorage.setItem('activeRout', 'subscriptions');
+										}}
 										className={({ isActive }) => {
 											return isActive ? activeClass[0] : defaultClass[0];
 										}}
