@@ -1,6 +1,6 @@
 import { Routes, Route, Link, NavLink } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import './mainAppPages.css';
 
@@ -15,6 +15,8 @@ import Header from '../../components/MainAppComponents/Header/Header';
 import useLocoScroll from '../../hooks/useLocoScrollForMainApp.js';
 
 import mainLogo from '../../img/NEAR-logo.png';
+import mainLogoForDark from '../../img/NEAR-logo-white.png';
+
 import dashboardSvg from '../../img/MainAppIcon/ic_sharp-dashboard.svg';
 import dashboardSvgActive from '../../img/MainAppIcon/ic_sharp-dashboard-active.svg';
 import friendsSvg from '../../img/MainAppIcon/mdi_accounts.svg';
@@ -43,8 +45,26 @@ const MainApp = () => {
 
 	const [isDarkMode, setIsDarkMode] = useState(false);
 
+	//Тяну тему из localStorage 1 раз при рендере компонента
+	useEffect(() => {
+		if (localStorage.getItem('themesMode') === 'dark') {
+			setIsDarkMode(true);
+		} else if (localStorage.getItem('themesMode') === 'light') {
+			setIsDarkMode(false);
+		}
+	}, []);
+
 	const toggleDarkMode = () => {
 		setIsDarkMode(!isDarkMode);
+
+		//Записываю выбранную тему в localStorage
+		if (!isDarkMode) {
+			localStorage.setItem('themesMode', 'dark');
+			console.log(localStorage.getItem('themesMode'));
+		} else {
+			localStorage.setItem('themesMode', 'light');
+			console.log(localStorage.getItem('themesMode'));
+		}
 	};
 
 	return (
@@ -52,7 +72,11 @@ const MainApp = () => {
 			<div className='left-nav-section'>
 				<NavLink to='' title='To home'>
 					<div className='logo'>
-						<img className='logo__img' src={mainLogo} alt='logo' />
+						<img
+							className={isDarkMode ? 'logo__img-small' : 'logo__img'}
+							src={isDarkMode ? mainLogoForDark : mainLogo}
+							alt='logo'
+						/>
 						<h1 className='logo__text'>NEAR</h1>
 					</div>
 				</NavLink>

@@ -10,7 +10,7 @@ const templatesList = [
 	},
 	{
 		id: '2',
-		title: 'Djmfe kjqlf qqwlj',
+		title: 'Djmfe kjqlf qqwlj regwerger',
 		emergencyType: emergencyType[2],
 		date: 'Apr 1, 2024',
 	},
@@ -23,19 +23,19 @@ const templatesList = [
 	},
 	{
 		id: '4',
-		title: 'Ejlkj ekwjll',
+		title: 'Ejlkj ekwjll refgewrt',
 		emergencyType: emergencyType[1],
 		date: 'Apr 2, 2024',
 	},
 	{
 		id: '5',
-		title: 'Flkjfn jlq;ej',
+		title: 'Flkjfn jlq;ej regwregre',
 		emergencyType: emergencyType[3],
 		date: 'Feb 29, 2024',
 	},
 	{
 		id: '6',
-		title: 'Efklj wlkjrfel',
+		title: 'Efklj wlkjrfel wergergre',
 		emergencyType: emergencyType[5],
 		date: 'Jan 11, 2024',
 	},

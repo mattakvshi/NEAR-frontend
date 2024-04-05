@@ -1,15 +1,15 @@
 .dark-theme {
 	--extra-light: #222;
-	--light-bg: #333;
+	--light-bg: #344756;
 	--light-bg80: rgba(51, 51, 51, 0.8);
 	--light-bg0: rgba(51, 51, 51, 0);
 
-	--gray-bg: #444;
-	--gray-dark-bg: #555;
+	--gray-bg: #0a1f32;
+	--gray-dark-bg: #2d384a;
 
 	--dark-header: rgba(255, 255, 255, 0.67);
 	--dark-desc: rgba(255, 255, 255, 0.3);
-	--text-color-dark: #fff;
+	--text-color-dark: #d2d2d2;
 
 	--text-color-medium-dark: #ccc;
 	--text-color-medium-dark90: rgba(204, 204, 204, 0.9);
@@ -84,6 +84,13 @@
 	height: calc(var(--index) * 1.6);
 	border-radius: calc(var(--index) * 1.6);
 }
+
+.logo__img-small {
+	width: calc(var(--index) * 1.4);
+	height: calc(var(--index) * 1.4);
+	border-radius: calc(var(--index) * 1.6);
+}
+
 .logo__text {
 	font-size: calc(var(--index) * 1);
 	font-weight: 500;
@@ -252,7 +259,7 @@ nav ul.nav-list-center li a:active:after {
 
 .active-item {
 	font-size: calc(var(--index) * 0.72);
-	font-weight: 500;
+	font-weight: 600;
 	color: var(--text-color-dark);
 }
 

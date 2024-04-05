@@ -146,6 +146,8 @@
 }
 
 .tools-text {
+	color: var(--text-color-dark);
+
 	font-size: calc(var(--index) * 0.8);
 	font-weight: 600;
 	line-height: calc(var(--index) * 1.2);
@@ -184,7 +186,7 @@
 
 	font-size: calc(var(--index) * 0.5);
 	font-weight: 500;
-	color: var(--light-bg);
+	color: #d2d2d2;
 	text-align: center;
 }
 
@@ -347,10 +349,11 @@
 }
 
 .templates-row {
-	padding: calc(var(--index) * 2) 0;
+	padding: calc(var(--index) * 1) 0;
 }
 
 .templates-row__title {
+	color: var(--text-color-dark);
 	font-size: calc(var(--index) * 0.94);
 	font-weight: 500;
 }

@@ -31,7 +31,7 @@ const emergencyType = [
 	},
 	{
 		id: '6',
-		title: 'terrorist attack',
+		title: 'Terrorist attack',
 		color: '#965443',
 		bgColor: 'rgb(59%, 33%, 26%, 0.3)',
 	},
