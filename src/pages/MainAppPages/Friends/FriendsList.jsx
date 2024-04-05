@@ -34,14 +34,17 @@ const FriendsList = ({ currentUser, preloaderSvg, useLocoScroll }) => {
 					<img className='preloader-svg' src={preloaderSvg} alt='preloader' />
 				</div>
 			) : (
-				<div>
+				<section className='friends-wrapper' data-scroll-section>
 					<h1>FriendsList</h1>
 					{currentUser ? (
 						<p>User ID: {currentUser.id}</p>
 					) : (
 						<p>User not found</p>
 					)}
-				</div>
+
+					{/*Чтобы прокрутка до конца долистывала*/}
+					<div style={{ minHeight: '100px' }}></div>
+				</section>
 			)}
 		</>
 	);

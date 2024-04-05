@@ -157,6 +157,8 @@ const Dashboard = ({ currentUser, preloaderSvg, useLocoScroll }) => {
 							)}
 						</ul>
 					</div>
+					{/*Чтобы прокрутка до конца долистывала*/}
+					<div style={{ minHeight: '100px' }}></div>
 				</section>
 			)}
 		</>
