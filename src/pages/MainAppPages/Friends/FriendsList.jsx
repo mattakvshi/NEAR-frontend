@@ -21,7 +21,7 @@ const FriendsList = ({ currentUser, preloaderSvg, useLocoScroll }) => {
 	useEffect(() => {
 		if (timer === 0) {
 			clear();
-			console.log('отработал');
+			//console.log('отработал');
 		}
 	}, [timer]);
 
