@@ -151,6 +151,7 @@ const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {
 
 		document.addEventListener('mousewheel', detectTrackPad);
 		document.addEventListener('touchstart', detectTrackPad);
+		document.addEventListener('touchend', detectTrackPad);
 	}, []);
 
 	//console.log(isTouchEvent);
