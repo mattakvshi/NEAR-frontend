@@ -1,0 +1,19 @@
+.small-divider {
+	width: 100%;
+	min-height: 1px;
+
+	position: relative;
+}
+
+.small-divider::before {
+	content: '';
+
+	position: absolute;
+	left: 3%;
+	top: 100%;
+
+	display: block;
+	height: 1px;
+	width: 94%;
+	background-color: var(--dark-desc01);
+}
