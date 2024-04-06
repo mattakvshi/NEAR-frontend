@@ -97,9 +97,32 @@ const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {
 
 	useLocoScroll(!preloader && !(timer > 0));
 
+	const [isTouchEvent, setTouchEvent] = useState(false);
+
+	//Смотрим что использует пользователь мышь или тачпад
+	useEffect(() => {
+		document.addEventListener('touchstart', function (e) {
+			if (e.touches[0].isPrimary) {
+				// Пользователь использует тачпад
+				setTouchEvent(true);
+				console.log('Использует тачпад');
+			} else {
+				// Пользователь использует мышь
+				setTouchEvent(false);
+				console.log('Использует мышь');
+			}
+		});
+	}, []);
+
+	console.log(isTouchEvent);
+
 	return (
 		<>
-			<CustomCursor />
+			{isTouchEvent ? (
+				<CustomCursor cursorSpeed={0.8} />
+			) : (
+				<CustomCursor cursorSpeed={0.5} />
+			)}
 
 			{preloader || timer > 0 ? (
 				<div className='loader-wrapper absolute'>

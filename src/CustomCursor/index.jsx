@@ -3,7 +3,7 @@ import './style.css';
 // import CustomCursorContext from "./context/CustomCursorContext";
 
 // TODO: Hide if cursor not moved
-const CustomCursor = () => {
+const CustomCursor = ({ cursorSpeed }) => {
 	// const { type } = useContext(CustomCursorContext);
 	const secondaryCursor = React.useRef(null);
 	const positionRef = React.useRef({
@@ -33,6 +33,7 @@ const CustomCursor = () => {
 	}, []);
 
 	React.useEffect(() => {
+		console.log(cursorSpeed);
 		const followMouse = () => {
 			positionRef.current.key = requestAnimationFrame(followMouse);
 			const {
@@ -47,8 +48,8 @@ const CustomCursor = () => {
 				positionRef.current.destinationX = mouseX;
 				positionRef.current.destinationY = mouseY;
 			} else {
-				positionRef.current.distanceX = (mouseX - destinationX) * 0.1;
-				positionRef.current.distanceY = (mouseY - destinationY) * 0.1;
+				positionRef.current.distanceX = (mouseX - destinationX) * cursorSpeed;
+				positionRef.current.distanceY = (mouseY - destinationY) * cursorSpeed;
 				if (
 					Math.abs(positionRef.current.distanceX) +
 						Math.abs(positionRef.current.distanceY) <
@@ -65,7 +66,7 @@ const CustomCursor = () => {
 				secondaryCursor.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
 		};
 		followMouse();
-	}, []);
+	}, [cursorSpeed]);
 	return (
 		<div className={`cursor-wrapper default`}>
 			<div className='secondary-cursor' ref={secondaryCursor}></div>
