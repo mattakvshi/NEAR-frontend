@@ -98,7 +98,7 @@ const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {
 	useLocoScroll(!preloader && !(timer > 0));
 
 	//Смотрим что использует пользователь мышь или тачпад
-	const [isTouchEvent, setTouchEvent] = useState();
+	const [isTouchEvent, setTouchEvent] = useState(true);
 
 	// //Смотрим что использует пользователь мышь или тачпад
 	// useEffect(() => {
@@ -153,13 +153,13 @@ const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {
 		function detectTrackPad(e) {
 			// Пользователь использует тачпад
 			setTouchEvent(true);
-			console.log('Использует тачпад');
+			//console.log('Использует тачпад');
 		}
 
 		function detectMouse(e) {
 			// Пользователь использует мышь
 			setTouchEvent(false);
-			console.log('Использует мышь');
+			//console.log('Использует мышь');
 		}
 
 		document.addEventListener('mousewheel', detectMouse);
@@ -171,7 +171,7 @@ const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {
 	return (
 		<>
 			{isTouchEvent ? (
-				<CustomCursor cursorSpeed={0.6} />
+				<CustomCursor cursorSpeed={0.7} />
 			) : (
 				<CustomCursor cursorSpeed={0.3} />
 			)}
