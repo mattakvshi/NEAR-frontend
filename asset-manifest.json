@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/NEAR-frontend/static/css/main.84687433.css",
-    "main.js": "/NEAR-frontend/static/js/main.2c877ce5.js",
+    "main.css": "/NEAR-frontend/static/css/main.473c1132.css",
+    "main.js": "/NEAR-frontend/static/js/main.d3387927.js",
     "static/media/header-bg.jpg": "/NEAR-frontend/static/media/header-bg.fc77d52808a710c57c22.jpg",
     "static/media/Log-in-Community.webp": "/NEAR-frontend/static/media/Log-in-Community.aba94ab5febc967f289c.webp",
     "static/media/header-bg.webp": "/NEAR-frontend/static/media/header-bg.8f70873e09d472ff9cf0.webp",
@@ -9,16 +9,34 @@
     "static/media/Log-In-Account.webp": "/NEAR-frontend/static/media/Log-In-Account.1494b20a1ce3f0f22ac0.webp",
     "static/media/desc-img.webp": "/NEAR-frontend/static/media/desc-img.df974e471d50eef43940.webp",
     "static/media/Sign-In-Account.webp": "/NEAR-frontend/static/media/Sign-In-Account.225db40c68e4c1ae5ecd.webp",
+    "static/media/NEAR-logo.png": "/NEAR-frontend/static/media/NEAR-logo.1c0803207fe912f6a9f0.png",
     "static/media/NEAR-logo-white.png": "/NEAR-frontend/static/media/NEAR-logo-white.8409faf065eaff5eecc9.png",
     "static/media/NEAR-account-png-icon.png": "/NEAR-frontend/static/media/NEAR-account-png-icon.46455b6805e4fa2576c3.png",
+    "static/media/NEAR-user-group.png": "/NEAR-frontend/static/media/NEAR-user-group.6d2138b4bef26730f632.png",
+    "static/media/NEAR-user-small.png": "/NEAR-frontend/static/media/NEAR-user-small.0f5e39bf61f2f57b8b42.png",
+    "static/media/NEAR-sentNotification-icon копия.png": "/NEAR-frontend/static/media/NEAR-sentNotification-icon копия.c74a546c02debb62b3c3.png",
     "static/media/NEAR-close-icon.png": "/NEAR-frontend/static/media/NEAR-close-icon.79bdbdad615fc1a2e6f8.png",
     "static/media/NEAR-community-png-icon.png": "/NEAR-frontend/static/media/NEAR-community-png-icon.6c5660af90e7727b072a.png",
+    "static/media/sun.svg": "/NEAR-frontend/static/media/sun.51393a375a81e44f27f1e33d713ca0ae.svg",
+    "static/media/settings.svg": "/NEAR-frontend/static/media/settings.4d51ea4a96614ea8e0a6508e1a05b9ff.svg",
+    "static/media/moon.svg": "/NEAR-frontend/static/media/moon.a84eb240a8739f0ef02594df4c131706.svg",
+    "static/media/motion-blur-2.svg": "/NEAR-frontend/static/media/motion-blur-2.b124bd9445a12fe3de3eba736670da0a.svg",
+    "static/media/VectorDotDotDot.svg": "/NEAR-frontend/static/media/VectorDotDotDot.a9b90bfc7ec7ab487e919a4f4a95476e.svg",
+    "static/media/mdi_accounts.svg": "/NEAR-frontend/static/media/mdi_accounts.bff74928c4a958731b23d329d5b909f0.svg",
+    "static/media/mdi_accounts-active.svg": "/NEAR-frontend/static/media/mdi_accounts-active.ac626c0be7b748e28a9e4591ed69630f.svg",
+    "static/media/majesticons_logout-half-circle.svg": "/NEAR-frontend/static/media/majesticons_logout-half-circle.bb287ac53a58618a1a8dc62d10d59512.svg",
+    "static/media/material-symbols_search.svg": "/NEAR-frontend/static/media/material-symbols_search.193012ab55f7709785d19a92610537d1.svg",
+    "static/media/bouncing-circles.svg": "/NEAR-frontend/static/media/bouncing-circles.66f4b7ffde7225564fe8efc8cd9d6eb3.svg",
     "index.html": "/NEAR-frontend/index.html",
-    "main.84687433.css.map": "/NEAR-frontend/static/css/main.84687433.css.map",
-    "main.2c877ce5.js.map": "/NEAR-frontend/static/js/main.2c877ce5.js.map"
+    "static/media/Line 39.svg": "/NEAR-frontend/static/media/Line 39.2ba5771930eafd562752f370fe63a396.svg",
+    "static/media/ic_sharp-dashboard.svg": "/NEAR-frontend/static/media/ic_sharp-dashboard.d565cb174c3ef925eea2d643e4c84dbb.svg",
+    "static/media/ic_sharp-dashboard-active.svg": "/NEAR-frontend/static/media/ic_sharp-dashboard-active.fc60d518e2cb0642bc413e73e35b3258.svg",
+    "static/media/Vector.svg": "/NEAR-frontend/static/media/Vector.960936775e2029a329974611b88e88fc.svg",
+    "main.473c1132.css.map": "/NEAR-frontend/static/css/main.473c1132.css.map",
+    "main.d3387927.js.map": "/NEAR-frontend/static/js/main.d3387927.js.map"
   },
   "entrypoints": [
-    "static/css/main.84687433.css",
-    "static/js/main.2c877ce5.js"
+    "static/css/main.473c1132.css",
+    "static/js/main.d3387927.js"
   ]
 }
