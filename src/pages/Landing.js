@@ -102,7 +102,7 @@ const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {
 	//Смотрим что использует пользователь мышь или тачпад
 	useEffect(() => {
 		document.addEventListener('touchstart', function (e) {
-			if (e.touches[0].isPrimary) {
+			if (e.touches.length === 1) {
 				// Пользователь использует тачпад
 				setTouchEvent(true);
 				console.log('Использует тачпад');
