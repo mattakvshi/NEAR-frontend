@@ -101,20 +101,23 @@ const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {
 
 	//Смотрим что использует пользователь мышь или тачпад
 	useEffect(() => {
-		document.addEventListener('touchstart', function (e) {
-			if (e.touches.length === 1) {
-				// Пользователь использует тачпад
+		function detectTrackPad(e) {
+			setTouchEvent(false);
+			if (e.wheelDeltaY) {
+				if (e.wheelDeltaY === e.deltaY * -3) {
+					setTouchEvent(true);
+				}
+			} else if (e.deltaMode === 0) {
 				setTouchEvent(true);
-				console.log('Использует тачпад');
-			} else {
-				// Пользователь использует мышь
-				setTouchEvent(false);
-				console.log('Использует мышь');
 			}
-		});
-	}, []);
+			console.log(isTouchEvent ? 'Trackpad detected' : 'Mousewheel detected');
+		}
 
-	console.log(isTouchEvent);
+		document.addEventListener('mousewheel', detectTrackPad, false);
+		document.addEventListener('DOMMouseScroll', detectTrackPad, false);
+	}, [isTouchEvent]);
+
+	//console.log(isTouchEvent);
 
 	return (
 		<>
