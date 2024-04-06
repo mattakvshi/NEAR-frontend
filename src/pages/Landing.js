@@ -97,7 +97,8 @@ const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {
 
 	useLocoScroll(!preloader && !(timer > 0));
 
-	const [isTouchEvent, setTouchEvent] = useState(false);
+	//Смотрим что использует пользователь мышь или тачпад
+	const [isTouchEvent, setTouchEvent] = useState();
 
 	// //Смотрим что использует пользователь мышь или тачпад
 	// useEffect(() => {
@@ -170,9 +171,9 @@ const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {
 	return (
 		<>
 			{isTouchEvent ? (
-				<CustomCursor cursorSpeed={0.8} />
+				<CustomCursor cursorSpeed={0.6} />
 			) : (
-				<CustomCursor cursorSpeed={0.5} />
+				<CustomCursor cursorSpeed={0.3} />
 			)}
 
 			{preloader || timer > 0 ? (
