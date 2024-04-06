@@ -99,12 +99,30 @@ const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {
 
 	const [isTouchEvent, setTouchEvent] = useState(false);
 
+	// //Смотрим что использует пользователь мышь или тачпад
+	// useEffect(() => {
+	// 	function detectTrackPad(e) {
+	// 		setTouchEvent(false);
+	// 		if (e.wheelDeltaY) {
+	// 			if (e.wheelDeltaY === e.deltaY * -3) {
+	// 				setTouchEvent(true);
+	// 			}
+	// 		} else if (e.deltaMode === 0) {
+	// 			setTouchEvent(true);
+	// 		}
+	// 		console.log(isTouchEvent ? 'Trackpad detected' : 'Mousewheel detected');
+	// 	}
+
+	// 	document.addEventListener('mousewheel', detectTrackPad, false);
+	// 	document.addEventListener('DOMMouseScroll', detectTrackPad, false);
+	// }, [isTouchEvent]);
+
 	//Смотрим что использует пользователь мышь или тачпад
 	useEffect(() => {
 		function detectTrackPad(e) {
 			setTouchEvent(false);
 			if (e.wheelDeltaY) {
-				if (e.wheelDeltaY === e.deltaY * -3) {
+				if (Math.abs(e.wheelDeltaY) !== 120) {
 					setTouchEvent(true);
 				}
 			} else if (e.deltaMode === 0) {
