@@ -14,8 +14,9 @@
 	--gray-dark-bg: #b8b8b8;
 
 	--dark-header: rgba(10, 31, 50, 0.67);
-	--dark-desc: rgba(10, 31, 50, 0.3);
 	--dark-placeholder: rgba(10, 31, 50, 0.4);
+	--dark-desc: rgba(10, 31, 50, 0.3);
+	--dark-desc01: rgba(10, 31, 50, 0.1);
 	--text-color-dark: #0a1f32;
 
 	--text-color-medium-dark: #2d384a;

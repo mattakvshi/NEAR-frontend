@@ -15,6 +15,7 @@ import arrow from '../../../img/MainAppIcon/Line 39.svg';
 import ListWrapper from '../../../components/MainAppComponents/ListWrapper/ListWrapper';
 import ListWrapperHeader from '../../../components/MainAppComponents/ListWrapperHeader/ListWrapperHeader';
 import SelectRecipientsList from '../../../components/MainAppComponents/DashboardComponents/SelectRecipientsList/SelectRecipientsList';
+import BigDivider from '../../../components/MainAppComponents/BigDivider/BigDivider';
 
 const Dashboard = ({ currentUser, preloaderSvg, useLocoScroll }) => {
 	const currentTemplatesList = () => {
@@ -162,6 +163,7 @@ const Dashboard = ({ currentUser, preloaderSvg, useLocoScroll }) => {
 					</div>
 					<ListWrapper>
 						<ListWrapperHeader title={'Select Recipients'} />
+						<BigDivider />
 						<SelectRecipientsList
 							groups={
 								'groups' in currentUser

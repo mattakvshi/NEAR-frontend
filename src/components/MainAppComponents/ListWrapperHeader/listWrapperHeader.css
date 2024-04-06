@@ -6,7 +6,7 @@
 
 	width: 100%;
 
-	padding: calc(var(--index) * 1) calc(var(--index) * 2);
+	padding: calc(var(--index) * 0.8) calc(var(--index) * 2);
 }
 
 .list-header-wrapper__title {
