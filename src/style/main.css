@@ -4,6 +4,7 @@
 :root {
 	/* Light mode */
 	--extra-light: #e5e5e5;
+	--search-light: #efefef;
 
 	--light-bg: #d2d2d2;
 	--light-bg80: rgba(210, 210, 210, 0.8);
@@ -14,6 +15,7 @@
 
 	--dark-header: rgba(10, 31, 50, 0.67);
 	--dark-desc: rgba(10, 31, 50, 0.3);
+	--dark-placeholder: rgba(10, 31, 50, 0.4);
 	--text-color-dark: #0a1f32;
 
 	--text-color-medium-dark: #2d384a;

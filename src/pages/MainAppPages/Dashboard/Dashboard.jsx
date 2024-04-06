@@ -12,6 +12,8 @@ import sos from '../../../img/MainAppIcon/Group 33514.png';
 import plus from '../../../img/MainAppIcon/Vector.svg';
 import profileTmpImg from '../../../img/NEAR-user-small.png';
 import arrow from '../../../img/MainAppIcon/Line 39.svg';
+import ListWrapper from '../../../components/MainAppComponents/ListWrapper/ListWrapper';
+import ListWrapperHeader from '../../../components/MainAppComponents/ListWrapperHeader/ListWrapperHeader';
 
 const Dashboard = ({ currentUser, preloaderSvg, useLocoScroll }) => {
 	const currentTemplatesList = () => {
@@ -43,7 +45,7 @@ const Dashboard = ({ currentUser, preloaderSvg, useLocoScroll }) => {
 	useEffect(() => {
 		if (timer === 0) {
 			clear();
-			console.log('отработал');
+			//console.log('отработал');
 		}
 	}, [timer]);
 
@@ -157,8 +159,11 @@ const Dashboard = ({ currentUser, preloaderSvg, useLocoScroll }) => {
 							)}
 						</ul>
 					</div>
+					<ListWrapper>
+						<ListWrapperHeader title={'Select Recipients'} />
+					</ListWrapper>
 					{/*Чтобы прокрутка до конца долистывала*/}
-					<div style={{ minHeight: '100px' }}></div>
+					<div style={{ minHeight: '200px' }}></div>
 				</section>
 			)}
 		</>

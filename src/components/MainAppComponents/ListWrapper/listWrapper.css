@@ -1,0 +1,7 @@
+.list-wrapper {
+	width: 100%;
+	min-height: 100px;
+
+	background-color: var(--light-bg);
+	border-radius: calc(var(--index) * 0.5);
+}
