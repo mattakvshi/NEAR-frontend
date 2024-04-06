@@ -100,23 +100,23 @@ const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {
 	//Смотрим что использует пользователь мышь или тачпад
 	const [isTouchEvent, setTouchEvent] = useState(true);
 
-	// //Смотрим что использует пользователь мышь или тачпад
-	// useEffect(() => {
-	// 	function detectTrackPad(e) {
-	// 		setTouchEvent(false);
-	// 		if (e.wheelDeltaY) {
-	// 			if (e.wheelDeltaY === e.deltaY * -3) {
-	// 				setTouchEvent(true);
-	// 			}
-	// 		} else if (e.deltaMode === 0) {
-	// 			setTouchEvent(true);
-	// 		}
-	// 		console.log(isTouchEvent ? 'Trackpad detected' : 'Mousewheel detected');
-	// 	}
+	//Смотрим что использует пользователь мышь или тачпад
+	useEffect(() => {
+		function detectTrackPad(e) {
+			setTouchEvent(false);
+			if (e.wheelDeltaY) {
+				if (e.wheelDeltaY === e.deltaY * -3) {
+					setTouchEvent(true);
+				}
+			} else if (e.deltaMode === 0) {
+				setTouchEvent(true);
+			}
+			console.log(isTouchEvent ? 'Trackpad detected' : 'Mousewheel detected');
+		}
 
-	// 	document.addEventListener('mousewheel', detectTrackPad, false);
-	// 	document.addEventListener('DOMMouseScroll', detectTrackPad, false);
-	// }, [isTouchEvent]);
+		document.addEventListener('mousewheel', detectTrackPad);
+		document.addEventListener('DOMMouseScroll', detectTrackPad);
+	}, [isTouchEvent]);
 
 	// //Смотрим что использует пользователь мышь или тачпад
 	// useEffect(() => {
@@ -136,35 +136,35 @@ const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {
 	// 	document.addEventListener('DOMMouseScroll', detectTrackPad, false);
 	// }, [isTouchEvent]);
 
-	//Смотрим что использует пользователь мышь или тачпад
-	useEffect(() => {
-		// function detectTrackPad(e) {
-		// 	if (e.pointerType === 'touch') {
-		// 		// Пользователь использует тачпад
-		// 		setTouchEvent(true);
-		// 		console.log('Использует тачпад');
-		// 	} else {
-		// 		// Пользователь использует мышь
-		// 		setTouchEvent(false);
-		// 		console.log('Использует мышь');
-		// 	}
-		// }
+	// //Смотрим что использует пользователь мышь или тачпад
+	// useEffect(() => {
+	// 	// function detectTrackPad(e) {
+	// 	// 	if (e.pointerType === 'touch') {
+	// 	// 		// Пользователь использует тачпад
+	// 	// 		setTouchEvent(true);
+	// 	// 		console.log('Использует тачпад');
+	// 	// 	} else {
+	// 	// 		// Пользователь использует мышь
+	// 	// 		setTouchEvent(false);
+	// 	// 		console.log('Использует мышь');
+	// 	// 	}
+	// 	// }
 
-		function detectTrackPad(e) {
-			// Пользователь использует тачпад
-			setTouchEvent(true);
-			//console.log('Использует тачпад');
-		}
+	// 	function detectTrackPad(e) {
+	// 		// Пользователь использует тачпад
+	// 		setTouchEvent(true);
+	// 		//console.log('Использует тачпад');
+	// 	}
 
-		function detectMouse(e) {
-			// Пользователь использует мышь
-			setTouchEvent(false);
-			//console.log('Использует мышь');
-		}
+	// 	function detectMouse(e) {
+	// 		// Пользователь использует мышь
+	// 		setTouchEvent(false);
+	// 		//console.log('Использует мышь');
+	// 	}
 
-		document.addEventListener('mousewheel', detectMouse);
-		document.addEventListener('DOMMouseScroll', detectTrackPad);
-	}, []);
+	// 	document.addEventListener('mousewheel', detectMouse);
+	// 	document.addEventListener('DOMMouseScroll', detectTrackPad);
+	// }, []);
 
 	//console.log(isTouchEvent);
 
