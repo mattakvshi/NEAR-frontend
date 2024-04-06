@@ -137,21 +137,31 @@ const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {
 
 	//Смотрим что использует пользователь мышь или тачпад
 	useEffect(() => {
+		// function detectTrackPad(e) {
+		// 	if (e.pointerType === 'touch') {
+		// 		// Пользователь использует тачпад
+		// 		setTouchEvent(true);
+		// 		console.log('Использует тачпад');
+		// 	} else {
+		// 		// Пользователь использует мышь
+		// 		setTouchEvent(false);
+		// 		console.log('Использует мышь');
+		// 	}
+		// }
+
 		function detectTrackPad(e) {
-			if (e.pointerType === 'touch') {
-				// Пользователь использует тачпад
-				setTouchEvent(true);
-				console.log('Использует тачпад');
-			} else {
-				// Пользователь использует мышь
-				setTouchEvent(false);
-				console.log('Использует мышь');
-			}
+			// Пользователь использует тачпад
+			setTouchEvent(true);
+			console.log('Использует тачпад');
 		}
 
-		document.addEventListener('mousewheel', detectTrackPad);
-		document.addEventListener('touchstart', detectTrackPad);
-		document.addEventListener('touchend', detectTrackPad);
+		function detectMouse(e) {
+			// Пользователь использует мышь
+			setTouchEvent(false);
+			console.log('Использует мышь');
+		}
+
+		document.addEventListener('mousewheel', detectMouse);
 		document.addEventListener('DOMMouseScroll', detectTrackPad);
 	}, []);
 
