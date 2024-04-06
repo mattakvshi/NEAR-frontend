@@ -117,23 +117,41 @@ const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {
 	// 	document.addEventListener('DOMMouseScroll', detectTrackPad, false);
 	// }, [isTouchEvent]);
 
+	// //Смотрим что использует пользователь мышь или тачпад
+	// useEffect(() => {
+	// 	function detectTrackPad(e) {
+	// 		setTouchEvent(false);
+	// 		if (e.wheelDeltaY) {
+	// 			if (Math.abs(e.wheelDeltaY) !== 120) {
+	// 				setTouchEvent(true);
+	// 			}
+	// 		} else if (e.deltaMode === 0) {
+	// 			setTouchEvent(true);
+	// 		}
+	// 		console.log(isTouchEvent ? 'Trackpad detected' : 'Mousewheel detected');
+	// 	}
+
+	// 	document.addEventListener('mousewheel', detectTrackPad, false);
+	// 	document.addEventListener('DOMMouseScroll', detectTrackPad, false);
+	// }, [isTouchEvent]);
+
 	//Смотрим что использует пользователь мышь или тачпад
 	useEffect(() => {
 		function detectTrackPad(e) {
-			setTouchEvent(false);
-			if (e.wheelDeltaY) {
-				if (Math.abs(e.wheelDeltaY) !== 120) {
-					setTouchEvent(true);
-				}
-			} else if (e.deltaMode === 0) {
+			if (e.pointerType === 'touch') {
+				// Пользователь использует тачпад
 				setTouchEvent(true);
+				console.log('Использует тачпад');
+			} else {
+				// Пользователь использует мышь
+				setTouchEvent(false);
+				console.log('Использует мышь');
 			}
-			console.log(isTouchEvent ? 'Trackpad detected' : 'Mousewheel detected');
 		}
 
-		document.addEventListener('mousewheel', detectTrackPad, false);
-		document.addEventListener('DOMMouseScroll', detectTrackPad, false);
-	}, [isTouchEvent]);
+		document.addEventListener('mousewheel', detectTrackPad);
+		document.addEventListener('touchstart', detectTrackPad);
+	}, []);
 
 	//console.log(isTouchEvent);
 
