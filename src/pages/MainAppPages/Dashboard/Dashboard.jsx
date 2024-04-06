@@ -14,6 +14,7 @@ import profileTmpImg from '../../../img/NEAR-user-small.png';
 import arrow from '../../../img/MainAppIcon/Line 39.svg';
 import ListWrapper from '../../../components/MainAppComponents/ListWrapper/ListWrapper';
 import ListWrapperHeader from '../../../components/MainAppComponents/ListWrapperHeader/ListWrapperHeader';
+import SelectRecipientsList from '../../../components/MainAppComponents/DashboardComponents/SelectRecipientsList/SelectRecipientsList';
 
 const Dashboard = ({ currentUser, preloaderSvg, useLocoScroll }) => {
 	const currentTemplatesList = () => {
@@ -161,6 +162,22 @@ const Dashboard = ({ currentUser, preloaderSvg, useLocoScroll }) => {
 					</div>
 					<ListWrapper>
 						<ListWrapperHeader title={'Select Recipients'} />
+						<SelectRecipientsList
+							groups={
+								'groups' in currentUser
+									? currentUser.groups.length
+										? currentUser.groups
+										: null
+									: null
+							}
+							friends={
+								'friends' in currentUser
+									? currentUser.friends.length
+										? currentUser.friends
+										: null
+									: null
+							}
+						/>
 					</ListWrapper>
 					{/*Чтобы прокрутка до конца долистывала*/}
 					<div style={{ minHeight: '200px' }}></div>

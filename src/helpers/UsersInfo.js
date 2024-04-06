@@ -1,8 +1,12 @@
 const usersInfo = [
 	{
 		id: 'mattakvshi',
-		name: 'Maksim',
+		name: 'Maksim Sidorenko',
+		country: 'Russia',
+		city: 'Krasnodar',
+		district: 'Severny',
 		profileImg: `${process.env.PUBLIC_URL}/tmpProfileImg/8_IMG_3596.jpg`,
+		notificationOptions: [{ id: '1' }, { id: '2' }, { id: '3' }],
 		groups: [
 			{
 				groupID: '23455',
@@ -15,11 +19,16 @@ const usersInfo = [
 				selectedColor: '#FF4C2B',
 			},
 		],
+		friends: [{ id: '2' }, { id: '3' }, { id: '4' }, { id: '5' }],
 		templates: [{ id: '1' }, { id: '3' }],
 	},
 	{
 		id: '2',
-		name: 'Anton',
+		name: 'Anton Ivanov',
+		country: 'Russia',
+		city: 'Krasnodar',
+		district: 'Polini Osipenko',
+		notificationOptions: [{ id: '1' }, { id: '2' }, { id: '3' }],
 		groups: [
 			{
 				groupID: '27357',
@@ -41,7 +50,11 @@ const usersInfo = [
 	},
 	{
 		id: '3',
-		name: 'Sanya',
+		name: 'Aleksandr Emelyanenko',
+		notificationOptions: [{ id: '1' }, { id: '2' }],
+		country: 'Russia',
+		city: 'Krasnodar',
+		district: 'Kamsamolsky',
 		groups: [
 			{
 				groupID: '23455',
@@ -57,7 +70,11 @@ const usersInfo = [
 	},
 	{
 		id: '4',
-		name: 'Dima',
+		name: 'Dmitry Vladarchuk',
+		country: 'Russia',
+		city: 'Krasnodar',
+		district: 'East depot',
+		notificationOptions: [{ id: '1' }, { id: '3' }],
 		groups: [
 			{
 				groupID: '23455',
@@ -73,7 +90,11 @@ const usersInfo = [
 	},
 	{
 		id: '5',
-		name: 'Yura',
+		name: 'Yuriy Sankin',
+		country: 'Russia',
+		city: 'Krasnodar',
+		district: 'Panorama',
+		notificationOptions: [{ id: '3' }],
 	},
 ];
 
