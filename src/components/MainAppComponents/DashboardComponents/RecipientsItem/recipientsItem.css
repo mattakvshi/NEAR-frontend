@@ -1,0 +1,11 @@
+.recipient-img {
+	width: 40px;
+	height: 40px;
+
+	border-radius: calc(var(--index) * 0.6);
+}
+
+.notification-options-list {
+	display: flex;
+	flex-direction: row;
+}

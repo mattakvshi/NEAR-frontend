@@ -1,6 +1,6 @@
 import './smallDivider.css';
 
 const SmallDivider = () => {
-	return <div className='big-divider'></div>;
+	return <div className='small-divider'></div>;
 };
 export default SmallDivider;
