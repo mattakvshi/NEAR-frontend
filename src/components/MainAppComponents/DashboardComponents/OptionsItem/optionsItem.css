@@ -1,0 +1,8 @@
+.options-wrapper {
+	padding: 0 calc(var(--index) * 0.4);
+	border-radius: calc(var(--index) * 5);
+}
+.options-text {
+	font-size: calc(var(--index) * 0.45);
+	font-weight: 500;
+}

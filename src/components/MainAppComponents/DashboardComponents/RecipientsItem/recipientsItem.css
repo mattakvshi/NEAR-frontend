@@ -1,6 +1,36 @@
+.column-width-type1 {
+	width: calc(var(--index) * 4.5);
+}
+
+.column-width-type2 {
+	width: calc(var(--index) * 8);
+}
+
+.column-width-type3 {
+	width: calc(var(--index) * 12);
+}
+
+.column-width-type4 {
+	width: calc(var(--index) * 2);
+}
+
+.recipient-item-column {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	justify-content: center;
+}
+
+.recipient-item-row {
+	display: flex;
+	flex-direction: row;
+	align-items: left;
+	justify-content: center;
+}
+
 .recipient-img {
-	width: 40px;
-	height: 40px;
+	width: calc(var(--index) * 1.7);
+	height: calc(var(--index) * 1.7);
 
 	border-radius: calc(var(--index) * 0.6);
 }
@@ -8,4 +38,5 @@
 .notification-options-list {
 	display: flex;
 	flex-direction: row;
+	column-gap: calc(var(--index) * 0.5);
 }

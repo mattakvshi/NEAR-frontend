@@ -11,6 +11,7 @@ export default function useLocoScroll(start) {
 		if (!start) return;
 		let locoScroll = null;
 		let scrollEnd = true;
+		let scrollPositionLog = [0, 0];
 
 		const scrollEl = document.querySelector('#main-section__body');
 
@@ -27,33 +28,53 @@ export default function useLocoScroll(start) {
 			if (scrollEnd) ScrollTrigger.refresh();
 		};
 
-		// Функция для проверки достижения конца области прокрутки
-		const handleScrollEnd = () => {
+		// Функция для проверки состояния прокрутки
+		const handleScroll = () => {
 			const scrollPosition = locoScroll.scroll.instance.scroll.y;
 			const scrollLimit = locoScroll.scroll.instance.limit;
 
 			//console.log(scrollPosition, scrollLimit.y - 200);
 			//console.log(locoScroll.scroll.instance.limit);
+
+			//Запоминаю прошлое и текущее состояние скролла
+			scrollPositionLog[0] = scrollPositionLog[1];
+			scrollPositionLog[1] = scrollPosition;
+
+			//Чтобы не листали если нечего листать и стек не переполняли
 			if (scrollLimit.y === 0) {
 				return;
 			}
-			if (scrollPosition >= scrollLimit.y) {
-				ReFrEsH(scrollEnd);
-				ScrollTrigger.update();
-				//console.log('Долистал до низа');
-				scrollEnd = !scrollEnd;
-				locoScroll.stop();
-				setTimeout(1000);
-				locoScroll.start();
+
+			//console.log(scrollDown, scrollEnd);
+
+			if (scrollPositionLog[0] < scrollPositionLog[1]) {
+				//console.log('листаю вниз');
+				if (!scrollEnd) {
+					//console.log('листаю вниз но долистал до конца и скролл залочен');
+					return;
+				}
+
+				if (scrollPosition >= scrollLimit.y) {
+					ReFrEsH(scrollEnd);
+					ScrollTrigger.update();
+					//console.log('Долистал до низа');
+					scrollEnd = false;
+					//locoScroll.stop();
+					//setTimeout(1000);
+					//locoScroll.start();
+				} else {
+					ScrollTrigger.update();
+					//console.log('Листаю');
+					//console.log(locoScroll.scroll.instance);
+				}
 			} else {
+				scrollEnd = true;
 				ScrollTrigger.update();
-				//console.log('Листаю');
-				//console.log(locoScroll.scroll.instance);
 			}
 		};
 
 		// Слушаем событие прокрутки
-		locoScroll.on('scroll', handleScrollEnd);
+		locoScroll.on('scroll', handleScroll);
 
 		ScrollTrigger.scrollerProxy(scrollEl, {
 			scrollTop(value) {
