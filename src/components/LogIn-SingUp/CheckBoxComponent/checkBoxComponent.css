@@ -59,14 +59,16 @@
 	pointer-events: none;
 	animation: var(--animation, none) 0.2s ease 0.175s;
 }
-.checkbox input:checked {
+.checkbox.checked input:checked {
 	--background: var(--active);
 	--border: var(--active);
 }
-.checkbox input:checked + svg {
+
+.checkbox.checked input:checked + svg {
 	--stroke-dashoffset: 0;
 }
-.checkbox input:checked + svg + svg {
+
+.checkbox.checked input:checked + svg + svg {
 	--animation: check;
 }
 .checkbox:hover input:not(:checked) {

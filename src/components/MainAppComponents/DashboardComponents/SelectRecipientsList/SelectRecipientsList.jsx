@@ -8,34 +8,48 @@ import SmallDivider from '../../SmallDivider/SmallDivider';
 const SelectRecipientsList = ({ groups, friends }) => {
 	const userInfoDTO = () => {
 		return usersInfo.map(
-			({ id, name, city, district, notificationOptions, friend }) => ({
+			({ id, name, city, district, notificationOptions, friends }) => ({
 				id,
 				name,
 				city,
 				district,
 				notificationOptions,
-				friend,
+				friends,
 			})
 		);
 	};
 
 	const groupsDTO = () => {
-		return groups.map(
-			({ groupID, groupName, notificationOptions, city, district }) => ({
-				groupID,
-				groupName,
-				notificationOptions,
-				city,
-				district,
-			})
+		return (
+			groups &&
+			groups.map(
+				({
+					groupID,
+					groupName,
+					groupImg,
+					notificationOptions,
+					city,
+					district,
+				}) => ({
+					groupID,
+					groupName,
+					groupImg,
+					notificationOptions,
+					city,
+					district,
+				})
+			)
 		);
 	};
 
 	//console.log(userInfoDTO());
 
 	const currentFriendsList = () => {
-		return userInfoDTO().filter(user =>
-			friends.some(currentUser => currentUser.id === user.id)
+		return (
+			friends &&
+			userInfoDTO().filter(user =>
+				friends.some(currentUser => currentUser.id === user.id)
+			)
 		);
 	};
 
@@ -47,23 +61,30 @@ const SelectRecipientsList = ({ groups, friends }) => {
 			<SmallDivider />
 			<ul>
 				{/* Groups */}
-				{groupsDTO().map(group => {
-					return (
-						<RecipientsItem
-							key={group.groupID}
-							name={group.groupName}
-							type={'Group'}
-							recipientsImg={
-								'groupImg' in group
-									? group.profileImg
-									: `${process.env.PUBLIC_URL}/tmpGroupImg/NEAR-user-group-ava.png`
-							}
-							notificationOptions={group.notificationOptions}
-							city={group.city}
-							district={group.district}
-						/>
-					);
-				})}
+				{groupsDTO() ? (
+					groupsDTO().map(group => {
+						return (
+							<RecipientsItem
+								key={group.groupID}
+								id={group.groupID}
+								name={group.groupName}
+								type={'Group'}
+								recipientsImg={
+									'groupImg' in group
+										? group.groupImg
+											? group.groupImg
+											: `${process.env.PUBLIC_URL}/tmpGroupImg/NEAR-user-group-ava.png`
+										: `${process.env.PUBLIC_URL}/tmpGroupImg/NEAR-user-group-ava.png`
+								}
+								notificationOptions={group.notificationOptions}
+								city={group.city}
+								district={group.district}
+							/>
+						);
+					})
+				) : (
+					<div style={{ display: 'none' }}></div>
+				)}
 
 				{/* Friends */}
 				{currentFriendsList() ? (
@@ -71,6 +92,7 @@ const SelectRecipientsList = ({ groups, friends }) => {
 						return (
 							<RecipientsItem
 								key={friend.id}
+								id={friend.id}
 								name={friend.name}
 								type={'Friend'}
 								recipientsImg={
@@ -84,6 +106,8 @@ const SelectRecipientsList = ({ groups, friends }) => {
 							/>
 						);
 					})
+				) : groupsDTO() ? (
+					<div style={{ display: 'none' }}></div>
 				) : (
 					<ListLine>
 						<div>You don't have any friends :(</div>
