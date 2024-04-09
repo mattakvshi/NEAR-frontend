@@ -7,7 +7,7 @@ import SmallDivider from '../../SmallDivider/SmallDivider';
 //import CheckBoxComponent from '../../../LogIn-SingUp/CheckBoxComponent/CheckBoxComponent';
 import { useState } from 'react';
 
-const SelectRecipientsList = ({ groups, friends }) => {
+const SelectRecipientsList = ({ groups, friends, isDarkMode }) => {
 	const userInfoDTO = () => {
 		return usersInfo.map(
 			({ id, name, city, district, notificationOptions, friends }) => ({
@@ -164,6 +164,7 @@ const SelectRecipientsList = ({ groups, friends }) => {
 								city={group.city}
 								district={group.district}
 								isCheckedAll={isCheckedAll}
+								isDarkMode={isDarkMode}
 							/>
 						);
 					})
@@ -189,6 +190,7 @@ const SelectRecipientsList = ({ groups, friends }) => {
 								city={friend.city}
 								district={friend.district}
 								isCheckedAll={isCheckedAll}
+								isDarkMode={isDarkMode}
 							/>
 						);
 					})

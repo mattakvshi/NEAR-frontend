@@ -279,6 +279,7 @@ const MainApp = () => {
 										currentUser={currentUser}
 										preloaderSvg={preloaderSvg}
 										useLocoScroll={useLocoScroll}
+										isDarkMode={isDarkMode}
 									/>
 								}
 							/>

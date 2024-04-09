@@ -1,25 +1,27 @@
 .dark-theme {
 	--extra-light: #222;
 	--light-bg: #344756;
-	--light-bg80: rgba(51, 51, 51, 0.8);
-	--light-bg0: rgba(51, 51, 51, 0);
+	--light-bg80: rgb(20%, 28%, 34%, 0.8);
+	--light-bg0: rgb(20%, 28%, 34%, 0);
 
 	--gray-bg: #0a1f32;
 	--gray-dark-bg: #2d384a;
 
-	--dark-header: rgba(255, 255, 255, 0.67);
-	--dark-desc: rgba(255, 255, 255, 0.3);
+	--dark-header: rgb(82%, 82%, 82%, 0.67);
+	--dark-desc: rgb(82%, 82%, 82%, 0.3);
 	--text-color-dark: #d2d2d2;
 
-	--text-color-medium-dark: #ccc;
-	--text-color-medium-dark90: rgba(204, 204, 204, 0.9);
+	--text-color-medium-dark: #b8b8b8;
+	--text-color-medium-dark90: rgb(72%, 72%, 72%, 0.9);
+	--text-color-medium-dark50: rgb(72%, 72%, 72%, 0.5);
+	--text-color-medium-dark20: rgb(72%, 72%, 72%, 0.2);
 
-	--text-color-light-dark: #bbb;
-	--text-color-light-dark50: rgba(187, 187, 187, 0.5);
-	--text-color-light-dark60: rgba(187, 187, 187, 0.6);
-	--text-color-light-dark70: rgba(187, 187, 187, 0.7);
-	--text-color-light-dark90: rgba(187, 187, 187, 0.9);
-	--text-color-light-dark0: rgba(187, 187, 187, 0);
+	--text-color-light-dark: #efefef;
+	--text-color-light-dark50: rgb(94%, 94%, 94%, 0.5);
+	--text-color-light-dark60: rgb(94%, 94%, 94%, 0.6);
+	--text-color-light-dark70: rgb(94%, 94%, 94%, 0.7);
+	--text-color-light-dark90: rgb(94%, 94%, 94%, 0.9);
+	--text-color-light-dark0: rgb(94%, 94%, 94%, 0);
 
 	--accent-color: #ff4c2b;
 	--accent-color90: rgba(255, 76, 43, 0.9);

@@ -17,6 +17,7 @@ const RecipientsItem = ({
 	city,
 	district,
 	isCheckedAll,
+	isDarkMode,
 }) => {
 	const currentOptionsList = () => {
 		return notificationsType.filter(type =>
@@ -62,6 +63,9 @@ const RecipientsItem = ({
 									title={option.title}
 									color={option.color}
 									bgColor={option.bgColor}
+									colorDark={option.colorDark}
+									bgColorDark={option.bgColorDark}
+									isDarkMode={isDarkMode}
 								/>
 							);
 						})}

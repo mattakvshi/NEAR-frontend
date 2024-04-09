@@ -17,7 +17,12 @@ import ListWrapperHeader from '../../../components/MainAppComponents/ListWrapper
 import SelectRecipientsList from '../../../components/MainAppComponents/DashboardComponents/SelectRecipientsList/SelectRecipientsList';
 import BigDivider from '../../../components/MainAppComponents/BigDivider/BigDivider';
 
-const Dashboard = ({ currentUser, preloaderSvg, useLocoScroll }) => {
+const Dashboard = ({
+	currentUser,
+	preloaderSvg,
+	useLocoScroll,
+	isDarkMode,
+}) => {
 	const currentTemplatesList = () => {
 		return 'templates' in currentUser
 			? templatesList.filter(template =>
@@ -179,6 +184,7 @@ const Dashboard = ({ currentUser, preloaderSvg, useLocoScroll }) => {
 										: null
 									: null
 							}
+							isDarkMode={isDarkMode}
 						/>
 					</ListWrapper>
 					{/*Чтобы прокрутка до конца долистывала*/}
