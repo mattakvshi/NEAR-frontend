@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/NEAR-frontend/static/css/main.509a1d99.css",
-    "main.js": "/NEAR-frontend/static/js/main.9ddfd88f.js",
+    "main.css": "/NEAR-frontend/static/css/main.fec2538c.css",
+    "main.js": "/NEAR-frontend/static/js/main.1bc20bea.js",
     "static/media/header-bg.jpg": "/NEAR-frontend/static/media/header-bg.fc77d52808a710c57c22.jpg",
     "static/media/Log-in-Community.webp": "/NEAR-frontend/static/media/Log-in-Community.aba94ab5febc967f289c.webp",
     "static/media/header-bg.webp": "/NEAR-frontend/static/media/header-bg.8f70873e09d472ff9cf0.webp",
@@ -32,11 +32,11 @@
     "static/media/ic_sharp-dashboard.svg": "/NEAR-frontend/static/media/ic_sharp-dashboard.d565cb174c3ef925eea2d643e4c84dbb.svg",
     "static/media/ic_sharp-dashboard-active.svg": "/NEAR-frontend/static/media/ic_sharp-dashboard-active.fc60d518e2cb0642bc413e73e35b3258.svg",
     "static/media/Vector.svg": "/NEAR-frontend/static/media/Vector.960936775e2029a329974611b88e88fc.svg",
-    "main.509a1d99.css.map": "/NEAR-frontend/static/css/main.509a1d99.css.map",
-    "main.9ddfd88f.js.map": "/NEAR-frontend/static/js/main.9ddfd88f.js.map"
+    "main.fec2538c.css.map": "/NEAR-frontend/static/css/main.fec2538c.css.map",
+    "main.1bc20bea.js.map": "/NEAR-frontend/static/js/main.1bc20bea.js.map"
   },
   "entrypoints": [
-    "static/css/main.509a1d99.css",
-    "static/js/main.9ddfd88f.js"
+    "static/css/main.fec2538c.css",
+    "static/js/main.1bc20bea.js"
   ]
 }
