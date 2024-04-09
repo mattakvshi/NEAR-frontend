@@ -1,17 +1,24 @@
 import './checkBoxComponent.css';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-export default function CheckBoxComponent({ id }) {
+export default function CheckBoxComponent({ isCheckedAll, name, id }) {
 	const [isChecked, setIsChecked] = useState(false);
+
+	useEffect(() => {
+		if (isCheckedAll) setIsChecked(true);
+		else setIsChecked(false);
+	}, [isCheckedAll]);
 
 	const handleChange = () => {
 		setIsChecked(!isChecked);
 	};
+
 	return (
 		<label className={`checkbox ${isChecked ? 'checked' : ''}`}>
 			<input
 				type='checkbox'
+				name={name}
 				id={id}
 				onChange={handleChange}
 				checked={isChecked}

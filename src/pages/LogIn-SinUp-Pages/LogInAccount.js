@@ -55,7 +55,10 @@ const LogInAccount = ({ AccLogImg, logoImg }) => {
 							</div>
 							<div className='lif-check-row'>
 								<div className='box-and-p-row'>
-									<CheckBoxComponent id={'accountLogIn'} />
+									<CheckBoxComponent
+										name={'accountLogIn'}
+										id={'accountLogIn'}
+									/>
 									<p className='custom-checkbox__label'>Remember me</p>
 								</div>
 								<div>

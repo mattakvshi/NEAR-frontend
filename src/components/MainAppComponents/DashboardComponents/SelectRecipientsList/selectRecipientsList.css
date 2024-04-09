@@ -1,0 +1,16 @@
+.list-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	width: 100%;
+
+	padding: calc(var(--index) * 1) calc(var(--index) * 2)
+		calc(var(--index) * 0.5);
+}
+
+.recipient-list-header-text {
+	color: var(--text-color-light-dark60);
+	font-size: calc(var(--index) * 0.51);
+	font-weight: 500;
+}

@@ -97,26 +97,26 @@ const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {
 
 	useLocoScroll(!preloader && !(timer > 0));
 
-	// //Смотрим что использует пользователь мышь или тачпад
-	// const [isTouchEvent, setTouchEvent] = useState(false);
+	//Смотрим что использует пользователь мышь или тачпад
+	const [isTouchEvent, setTouchEvent] = useState(false);
 
-	// //Смотрим что использует пользователь мышь или тачпад
-	// useEffect(() => {
-	// 	function detectTrackPad(e) {
-	// 		setTouchEvent(false);
-	// 		if (e.wheelDeltaY) {
-	// 			if (e.wheelDeltaY === e.deltaY * -3) {
-	// 				setTouchEvent(true);
-	// 			}
-	// 		} else if (e.deltaMode === 0) {
-	// 			setTouchEvent(true);
-	// 		}
-	// 		console.log(isTouchEvent ? 'Trackpad detected' : 'Mousewheel detected');
-	// 	}
+	//Смотрим что использует пользователь мышь или тачпад
+	useEffect(() => {
+		function detectTrackPad(e) {
+			setTouchEvent(false);
+			if (e.wheelDeltaY) {
+				if (e.wheelDeltaY === e.deltaY * -3) {
+					setTouchEvent(true);
+				}
+			} else if (e.deltaMode === 0) {
+				setTouchEvent(true);
+			}
+			console.log(isTouchEvent ? 'Trackpad detected' : 'Mousewheel detected');
+		}
 
-	// 	document.addEventListener('mousewheel', detectTrackPad);
-	// 	document.addEventListener('DOMMouseScroll', detectTrackPad);
-	// }, [isTouchEvent]);
+		document.addEventListener('mousewheel', detectTrackPad);
+		document.addEventListener('DOMMouseScroll', detectTrackPad);
+	}, [isTouchEvent]);
 
 	// //Смотрим что использует пользователь мышь или тачпад
 	// useEffect(() => {
@@ -170,13 +170,13 @@ const Landing = ({ AccLogImg, CommLogImg, AccCreateImg, CommCreateImg }) => {
 
 	return (
 		<>
-			{/* {isTouchEvent ? (
-				<CustomCursor cursorSpeed={0.7} />
+			{isTouchEvent ? (
+				<CustomCursor cursorSpeed={0.8} />
 			) : (
-				<CustomCursor cursorSpeed={0.3} />
-			)} */}
+				<CustomCursor cursorSpeed={0.5} />
+			)}
 
-			<CustomCursor cursorSpeed={0.5} />
+			{/* <CustomCursor cursorSpeed={0.6} /> */}
 
 			{preloader || timer > 0 ? (
 				<div className='loader-wrapper absolute'>

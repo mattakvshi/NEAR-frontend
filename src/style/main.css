@@ -21,6 +21,8 @@
 
 	--text-color-medium-dark: #2d384a;
 	--text-color-medium-dark90: rgba(45, 56, 74, 0.9);
+	--text-color-medium-dark50: rgba(45, 56, 74, 0.5);
+	--text-color-medium-dark20: rgba(45, 56, 74, 0.2);
 
 	--text-color-light-dark: #344756;
 	--text-color-light-dark50: rgba(52, 71, 86, 0.5);
@@ -58,6 +60,10 @@ body {
 
 main {
 	width: 100%;
+}
+
+.c-scrollbar {
+	z-index: 999;
 }
 
 .wrapper {

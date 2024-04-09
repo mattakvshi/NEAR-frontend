@@ -1,5 +1,5 @@
 .column-width-type1 {
-	width: calc(var(--index) * 4.5);
+	width: calc(var(--index) * 4.7);
 }
 
 .column-width-type2 {
@@ -58,4 +58,22 @@
 	display: flex;
 	flex-direction: row;
 	column-gap: calc(var(--index) * 0.5);
+}
+
+.recipient-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: calc(var(--index) * 3.3);
+
+	padding: calc(var(--index) * 0.1) calc(var(--index) * 0.1);
+	border: var(--text-color-medium-dark20) calc(var(--index) * 0.1) solid;
+	border-radius: calc(var(--index) * 0.4);
+}
+
+.recipient-btn-text {
+	color: var(--text-color-medium-dark50);
+	font-size: calc(var(--index) * 0.53);
+	font-weight: 600;
 }

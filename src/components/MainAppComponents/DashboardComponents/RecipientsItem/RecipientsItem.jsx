@@ -6,6 +6,7 @@ import { notificationsType } from '../../../../helpers/NotificationsType';
 import SmallDivider from '../../SmallDivider/SmallDivider';
 import OptionsItem from '../OptionsItem/OptionsItem';
 import CheckBoxComponent from '../../../LogIn-SingUp/CheckBoxComponent/CheckBoxComponent';
+import { Link } from 'react-router-dom';
 
 const RecipientsItem = ({
 	id,
@@ -15,6 +16,7 @@ const RecipientsItem = ({
 	notificationOptions,
 	city,
 	district,
+	isCheckedAll,
 }) => {
 	const currentOptionsList = () => {
 		return notificationsType.filter(type =>
@@ -30,7 +32,11 @@ const RecipientsItem = ({
 				<div className='recipient-item-column column-width-type2'>
 					<div className='recipient-item-row'>
 						<div className='recipient-item-column-center column-width-type4'>
-							<CheckBoxComponent id={id} />
+							<CheckBoxComponent
+								isCheckedAll={isCheckedAll}
+								name={'openForAllSelected'}
+								id={id}
+							/>
 						</div>
 						<div className='recipient-item-column column-width-type4'>
 							<img
@@ -44,10 +50,10 @@ const RecipientsItem = ({
 						</div>
 					</div>
 				</div>
-				<div className='recipient-item-column column-width-type1'>
+				<div className='recipient-item-column-center column-width-type1'>
 					<div className='recipient-text-regular'>{type}</div>
 				</div>
-				<div className='recipient-item-column column-width-type3'>
+				<div className='recipient-item-column-center column-width-type3'>
 					<ul className='notification-options-list'>
 						{currentOptionsList().map(option => {
 							return (
@@ -61,10 +67,15 @@ const RecipientsItem = ({
 						})}
 					</ul>
 				</div>
-				<div className='recipient-item-column column-width-type1'>
+				<div className='recipient-item-column-center column-width-type1'>
 					<div className='recipient-text-regular'>
 						{city}, {district}
 					</div>
+				</div>
+				<div className='recipient-item-column column-width-type1'>
+					<Link to='' className='recipient-btn' id={id}>
+						<span className='recipient-btn-text'>Details</span>
+					</Link>
 				</div>
 			</ListLine>
 			<SmallDivider />
