@@ -1,3 +1,4 @@
+import React from 'react';
 import './style/main.css';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -21,8 +22,23 @@ import CommCreateImg from './img/SignUp-LogIn/Sing-in-Community.webp';
 import logoImg from './img/Landing/NEAR-logo-white.png';
 
 import MainApp from './pages/MainAppPages/MainApp';
+import YandexCaptcha from './components/YandexCaptcha/YandexCaptcha';
 
 function App() {
+	//состояние прохождения капчи
+	const [captchaPassed, setCaptchaPassed] = React.useState(false);
+
+	//пользователь успешно прошел капчу
+	const handleCaptchaSuccess = token => {
+		console.log('Капча успешно пройдена, токен:', token);
+		setCaptchaPassed(true);
+	};
+
+	//этап капч
+	if (!captchaPassed) {
+		return <YandexCaptcha onSuccess={handleCaptchaSuccess} />;
+	}
+
 	return (
 		<div className='App'>
 			<Router>
