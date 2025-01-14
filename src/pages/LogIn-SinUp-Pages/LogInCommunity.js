@@ -72,7 +72,7 @@ const LogInCommunity = ({ CommLogImg, logoImg }) => {
 								</div>
 							</div>
 							<button className='lif-button'>
-								<span>GER STARTED</span>
+								<span>GET STARTED</span>
 							</button>
 							<div className='lif-link__row'>
 								<p className='lif-link__text'>New User?</p>
