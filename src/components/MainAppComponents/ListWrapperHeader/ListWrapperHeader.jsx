@@ -19,11 +19,30 @@ const ListWrapperHeader = ({ type, title, activeTab, setActiveTab }) => {
 						/>
 					</div>
 				</div>
-			) : (
+			) : type === 'friends' ? (
 				<div className='list-header-wrapper'>
 					<h2 className='list-header-wrapper__title'>
 						<TabButton
 							type={'friends'}
+							activeTab={activeTab}
+							setActiveTab={setActiveTab}
+						></TabButton>
+					</h2>
+					<div className='search-wrapper'>
+						<img className='search-svg' src={searchSvg} alt='searchSvg' />
+						<input
+							id='search'
+							className='search-input'
+							type='text'
+							placeholder='Search'
+						/>
+					</div>
+				</div>
+			) : (
+				<div className='list-header-wrapper'>
+					<h2 className='list-header-wrapper__title'>
+						<TabButton
+							type={'groups'}
 							activeTab={activeTab}
 							setActiveTab={setActiveTab}
 						></TabButton>

@@ -29,6 +29,7 @@ import NavGroupItem from '../../components/MainAppComponents/NavGroupItem/NavGro
 
 //Прелодер для дочерних роутов
 import preloaderSvg from '../../img/MainAppIcon/motion-blur-2.svg';
+import GroupsList from './Groups/GroupsList.jsx';
 
 const MainApp = () => {
 	const activeClass = ['active-item', 'main-nav-item-active'];
@@ -202,7 +203,7 @@ const MainApp = () => {
 					</div>
 
 					<div className='group-container'>
-						<Link className='nav-title-link' to=''>
+						<Link className='nav-title-link' to='groups'>
 							<h3 className='nav-title' title='To groups list'>
 								GROUPS
 							</h3>
@@ -290,6 +291,7 @@ const MainApp = () => {
 										currentUser={currentUser}
 										preloaderSvg={preloaderSvg}
 										useLocoScroll={useLocoScroll}
+										isDarkMode={isDarkMode}
 									/>
 								}
 							/>
@@ -300,6 +302,18 @@ const MainApp = () => {
 										currentUser={currentUser}
 										preloaderSvg={preloaderSvg}
 										useLocoScroll={useLocoScroll}
+										isDarkMode={isDarkMode}
+									/>
+								}
+							/>
+							<Route
+								path='groups'
+								element={
+									<GroupsList
+										currentUser={currentUser}
+										preloaderSvg={preloaderSvg}
+										useLocoScroll={useLocoScroll}
+										isDarkMode={isDarkMode}
 									/>
 								}
 							/>

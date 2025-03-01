@@ -33,7 +33,9 @@ const TabButton = ({ type, activeTab, setActiveTab }) => {
 					</button>
 				</div>
 			) : (
-				<div className='tabs'></div>
+				<div className='friends-tabs'>
+					<button className={'tab-button active'}>All groups</button>
+				</div>
 			)}
 		</>
 	);
