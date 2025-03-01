@@ -167,7 +167,7 @@ const Dashboard = ({
 						</ul>
 					</div>
 					<ListWrapper>
-						<ListWrapperHeader title={'Select Recipients'} />
+						<ListWrapperHeader type={'dashboard'} title={'Select Recipients'} />
 						<BigDivider />
 						<SelectRecipientsList
 							groups={

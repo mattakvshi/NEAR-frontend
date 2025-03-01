@@ -20,7 +20,7 @@
 	justify-content: space-between;
 	align-items: center;
 
-	width: calc(var(--index) * 20);
+	width: calc(var(--index) * 23.33);
 
 	background-color: var(--light-bg);
 	border-radius: calc(var(--index) * 0.5);

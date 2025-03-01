@@ -1,8 +1,19 @@
 import { useState, useEffect, useRef } from 'react';
 
-const FriendsList = ({ currentUser, preloaderSvg, useLocoScroll }) => {
+import ListWrapper from '../../../components/MainAppComponents/ListWrapper/ListWrapper';
+import ListWrapperHeader from '../../../components/MainAppComponents/ListWrapperHeader/ListWrapperHeader';
+import SelectRecipientsList from '../../../components/MainAppComponents/DashboardComponents/SelectRecipientsList/SelectRecipientsList';
+import BigDivider from '../../../components/MainAppComponents/BigDivider/BigDivider';
+
+const FriendsList = ({
+	currentUser,
+	preloaderSvg,
+	useLocoScroll,
+	isDarkMode,
+}) => {
 	const [timer, setTimer] = useState(1);
 	const id = useRef(null);
+	const [activeTab, setActiveTab] = useState('allFriends');
 
 	const clear = () => {
 		window.clearInterval(id.current);
@@ -25,6 +36,19 @@ const FriendsList = ({ currentUser, preloaderSvg, useLocoScroll }) => {
 		}
 	}, [timer]);
 
+	const getFriendsData = () => {
+		switch (activeTab) {
+			case 'allFriends':
+				return currentUser.friends || [];
+			case 'sentRequests':
+				return currentUser.friendsRequestsSent || [];
+			case 'receivedRequests':
+				return currentUser.friendsRequestsReceived || [];
+			default:
+				return [];
+		}
+	};
+
 	useLocoScroll(!(timer > 0));
 
 	return (
@@ -35,15 +59,22 @@ const FriendsList = ({ currentUser, preloaderSvg, useLocoScroll }) => {
 				</div>
 			) : (
 				<section className='friends-wrapper' data-scroll-section>
-					<h1>FriendsList</h1>
-					{currentUser ? (
-						<p>User ID: {currentUser.id}</p>
-					) : (
-						<p>User not found</p>
-					)}
+					<ListWrapper>
+						<ListWrapperHeader
+							type={'friends'}
+							title={'Friends'}
+							activeTab={activeTab}
+							setActiveTab={setActiveTab}
+						/>
+						<BigDivider />
+						<SelectRecipientsList
+							friends={getFriendsData()}
+							isDarkMode={isDarkMode}
+						/>
+					</ListWrapper>
 
 					{/*Чтобы прокрутка до конца долистывала*/}
-					<div style={{ minHeight: '100px' }}></div>
+					<div style={{ minHeight: '200px' }}></div>
 				</section>
 			)}
 		</>
